@@ -1,0 +1,185 @@
+# resources
+
+- design systems & guidelines
+  - https://designsystem.gov.ae/
+  - https://design-system.service.gov.uk/
+  - https://designsystem.digital.gov/
+- demo / test pages
+  - https://picnicss.com/tests
+  - https://cdn.simplecss.org/
+  - https://4mrnhq.csb.app/
+  - https://andybrewer.github.io/mvp/mvp.html
+  - https://simplecss.org/demo
+  - https://oxal.org/projects/sakura/demo/
+  - https://tailwindui.com/components/preview
+- other
+  - https://open-props.style/
+
+# design tokens
+
+- alignment
+- border & line thickness
+- color & opacity
+- font
+- ratios (aspect, contrast, etc.)
+- shadow
+- spacing
+- z-index
+
+# elements
+
+- <area />
+- <base />
+- <br />
+- <col />
+- <embed />
+- <hr />
+- <img />
+- <input />
+- <link />
+- <meta />
+- <source />
+- <track />
+- <wbr />
+- <a></a>
+- <abbr></abbr>
+- <address></address>
+- <article></article>
+- <aside></aside>
+- <audio></audio>
+- <b></b>
+- <bdi></bdi>
+- <bdo></bdo>
+- <blockquote></blockquote>
+- <body></body>
+- <button></button>
+- <canvas></canvas>
+- <caption></caption>
+- <cite></cite>
+- <code></code>
+- <colgroup></colgroup>
+- <data></data>
+- <datalist></datalist>
+- <dd></dd>
+- <del></del>
+- <details></details>
+- <dfn></dfn>
+- <dialog></dialog>
+- <div></div>
+- <dl></dl>
+- <dt></dt>
+- <em></em>
+- <fieldset></fieldset>
+- <figcaption></figcaption>
+- <figure></figure>
+- <footer></footer>
+- <form></form>
+- <h1></h1>
+- <h2></h2>
+- <h3></h3>
+- <h4></h4>
+- <h5></h5>
+- <h6></h6>
+- <head></head>
+- <header></header>
+- <hgroup></hgroup>
+- <html></html>
+- <i></i>
+- <iframe></iframe>
+- <ins></ins>
+- <kbd></kbd>
+- <label></label>
+- <legend></legend>
+- <li></li>
+- <main></main>
+- <map></map>
+- <mark></mark>
+- <math></math>
+- <menu></menu>
+- <meter></meter>
+- <nav></nav>
+- <noscript></noscript>
+- <object></object>
+- <ol></ol>
+- <optgroup></optgroup>
+- <option></option>
+- <output></output>
+- <p></p>
+- <picture></picture>
+- <portal></portal>
+- <pre></pre>
+- <progress></progress>
+- <q></q>
+- <rp></rp>
+- <rt></rt>
+- <ruby></ruby>
+- <s></s>
+- <samp></samp>
+- <script></script>
+- <search></search>
+- <section></section>
+- <select></select>
+- <slot></slot>
+- <small></small>
+- <span></span>
+- <strong></strong>
+- <style></style>
+- <sub></sub>
+- <summary></summary>
+- <sup></sup>
+- <svg></svg>
+- <table></table>
+- <tbody></tbody>
+- <td></td>
+- <template></template>
+- <textarea></textarea>
+- <tfoot></tfoot>
+- <th></th>
+- <thead></thead>
+- <time></time>
+- <title></title>
+- <tr></tr>
+- <u></u>
+- <ul></ul>
+- <var></var>
+- <video></video>
+
+# components
+
+- accordion
+- alert / message / notice / notification
+- avatar
+- badge / tag
+- banner
+- bento grid / tiles
+- box
+- card
+- dropdown / flyout menu
+- group
+  - button group
+  - input group
+- icon
+- level / row
+- loading indicator
+- menu
+- modal
+- navigation
+  - breadcrumb
+  - menu
+  - navbar
+  - pagination
+  - process list / steps
+  - tab
+- panel
+- tooltip
+
+# layout
+
+- columns
+- container
+- grid
+- hero
+
+# animations
+
+- ???
