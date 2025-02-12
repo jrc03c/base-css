@@ -28,35 +28,26 @@
 
 # elements
 
-- <area />
-- <base />
-- <br />
-- <col />
-- <embed />
-- <hr />
-- <img />
-- <input />
-- <link />
-- <meta />
-- <source />
-- <track />
-- <wbr />
 - <a></a>
 - <abbr></abbr>
 - <address></address>
+- <area />
 - <article></article>
 - <aside></aside>
 - <audio></audio>
 - <b></b>
+- <base />
 - <bdi></bdi>
 - <bdo></bdo>
 - <blockquote></blockquote>
 - <body></body>
+- <br />
 - <button></button>
 - <canvas></canvas>
 - <caption></caption>
 - <cite></cite>
 - <code></code>
+- <col />
 - <colgroup></colgroup>
 - <data></data>
 - <datalist></datalist>
@@ -69,6 +60,7 @@
 - <dl></dl>
 - <dt></dt>
 - <em></em>
+- <embed />
 - <fieldset></fieldset>
 - <figcaption></figcaption>
 - <figure></figure>
@@ -83,19 +75,24 @@
 - <head></head>
 - <header></header>
 - <hgroup></hgroup>
+- <hr />
 - <html></html>
 - <i></i>
 - <iframe></iframe>
+- <img />
+- <input />
 - <ins></ins>
 - <kbd></kbd>
 - <label></label>
 - <legend></legend>
 - <li></li>
+- <link />
 - <main></main>
 - <map></map>
 - <mark></mark>
 - <math></math>
 - <menu></menu>
+- <meta />
 - <meter></meter>
 - <nav></nav>
 - <noscript></noscript>
@@ -121,6 +118,7 @@
 - <select></select>
 - <slot></slot>
 - <small></small>
+- <source />
 - <span></span>
 - <strong></strong>
 - <style></style>
@@ -139,10 +137,12 @@
 - <time></time>
 - <title></title>
 - <tr></tr>
+- <track />
 - <u></u>
 - <ul></ul>
 - <var></var>
 - <video></video>
+- <wbr />
 
 # components
 
