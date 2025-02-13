@@ -348,6 +348,10 @@ blockquote * {
   color: var(--color-gray-7);
 }
 
+br {
+  margin: 0;
+}
+
 button {
   margin: 0;
   padding: var(--spacing-sm) var(--spacing);
