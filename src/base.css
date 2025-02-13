@@ -6,9 +6,9 @@
   --spacing-lg: 3rem;
   --spacing-xl: 6rem;
 
-  --border-radius: 0;
+  --border-radius: 4px;
   --shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-  --line-thickness: 8px;
+  --line-thickness: 2px;
 
   /* colors from: https://yeun.github.io/open-color/ */
 
@@ -155,6 +155,9 @@
     "Sitka Small", serif;
 
   --line-height: 1.5em;
+  --min-button-width: 128px;
+  --brightness-active: 90%;
+  --brightness-hover: 105%;
 }
 
 /* Set styles for all elements. */
@@ -321,18 +324,79 @@ a {
 }
 
 a:hover {
-  color: var(--color-blue-5);
+  filter: brightness(var(--brightness-hover));
 }
 
 a:active {
-  color: var(--color-blue-8);
+  filter: brightness(var(--brightness-active));
+}
+
+b {
+  font-weight: 700;
 }
 
 blockquote {
   padding: var(--spacing);
   border-left: var(--spacing) solid var(--color-gray-9);
-  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  border-radius: var(--border-radius);
   background-color: var(--color-gray-1);
+}
+
+button {
+  margin: 0;
+  padding: var(--spacing-sm) var(--spacing);
+  border: 0;
+  border-radius: var(--border-radius);
+  background-color: var(--color-gray-4);
+  cursor: pointer;
+  min-width: var(--min-button-width);
+  font-weight: 600;
+}
+
+button:hover {
+  filter: brightness(var(--brightness-hover));
+}
+
+button:active {
+  filter: brightness(var(--brightness-active));
+}
+
+button.danger {
+  background-color: var(--color-red-4);
+}
+
+button.dark {
+  background-color: var(--color-gray-7);
+  color: var(--color-gray-0);
+}
+
+button.info {
+  background-color: var(--color-grape-3);
+}
+
+button.link {
+  background-color: var(--color-blue-4);
+}
+
+button.primary {
+  background-color: var(--color-cyan-4);
+}
+
+button.success {
+  background-color: var(--color-lime-4);
+}
+
+button.warning {
+  background-color: var(--color-yellow-4);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
 }
 
 h1 {
@@ -366,5 +430,6 @@ hr {
   height: var(--line-thickness);
   margin: var(--spacing-lg) 0;
   border: none;
+  border-radius: var(--border-radius);
   background-color: var(--color-gray-1);
 }
