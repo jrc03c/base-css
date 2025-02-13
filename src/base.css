@@ -358,6 +358,43 @@ button {
   cursor: pointer;
   min-width: var(--min-button-width);
   font-weight: 600;
+  box-shadow: 0 var(--spacing-xs) 0 var(--color-gray-5);
+}
+
+button.danger {
+  background-color: var(--color-red-4);
+  box-shadow: 0 var(--spacing-xs) 0 var(--color-red-5);
+}
+
+button.dark {
+  background-color: var(--color-gray-8);
+  color: var(--color-gray-0);
+  box-shadow: 0 var(--spacing-xs) 0 var(--color-gray-9);
+}
+
+button.info {
+  background-color: var(--color-blue-4);
+  box-shadow: 0 var(--spacing-xs) 0 var(--color-blue-5);
+}
+
+button.link {
+  background-color: var(--color-indigo-4);
+  box-shadow: 0 var(--spacing-xs) 0 var(--color-indigo-5);
+}
+
+button.primary {
+  background-color: var(--color-teal-4);
+  box-shadow: 0 var(--spacing-xs) 0 var(--color-teal-5);
+}
+
+button.success {
+  background-color: var(--color-lime-4);
+  box-shadow: 0 var(--spacing-xs) 0 var(--color-lime-5);
+}
+
+button.warning {
+  background-color: var(--color-yellow-4);
+  box-shadow: 0 var(--spacing-xs) 0 var(--color-yellow-5);
 }
 
 button:hover {
@@ -366,35 +403,8 @@ button:hover {
 
 button:active {
   filter: brightness(var(--brightness-active));
-}
-
-button.danger {
-  background-color: var(--color-red-4);
-}
-
-button.dark {
-  background-color: var(--color-gray-8);
-  color: var(--color-gray-0);
-}
-
-button.info {
-  background-color: var(--color-blue-4);
-}
-
-button.link {
-  background-color: var(--color-indigo-4);
-}
-
-button.primary {
-  background-color: var(--color-teal-4);
-}
-
-button.success {
-  background-color: var(--color-lime-4);
-}
-
-button.warning {
-  background-color: var(--color-yellow-4);
+  box-shadow: none;
+  transform: translateY(var(--spacing-xs));
 }
 
 code {
