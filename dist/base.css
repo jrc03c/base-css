@@ -1,14 +1,14 @@
 :root {
   --spacing: 1.5rem;
   --spacing-xs: 0.25rem;
-  --spacing-sm: 0.55rem;
+  --spacing-sm: 0.75rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 3rem;
   --spacing-xl: 6rem;
 
-  --border-radius: 4px;
-  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-  --line-thickness: 4px;
+  --border-radius: 0;
+  --shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  --line-thickness: 8px;
 
   /* colors from: https://yeun.github.io/open-color/ */
 
@@ -150,7 +150,11 @@
   --font-size-5: 1em;
   --font-size-6: 0.7519em;
 
-  --line-height: 1.25em;
+  --font-sans-serif: system-ui, sans-serif;
+  --font-serif: Rockwell, "Rockwell Nova", "Roboto Slab", "DejaVu Serif",
+    "Sitka Small", serif;
+
+  --line-height: 1.5em;
 }
 
 /* Set styles for all elements. */
@@ -163,7 +167,7 @@ option,
 output,
 select,
 textarea {
-  font-family: system-ui, sans-serif;
+  font-family: var(--font-sans-serif);
   color: var(--color-gray-9);
   line-height: var(--line-height);
 }
@@ -311,6 +315,26 @@ wbr:last-child {
   margin-bottom: 0;
 }
 
+a {
+  color: var(--color-blue-6);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-blue-5);
+}
+
+a:active {
+  color: var(--color-blue-8);
+}
+
+blockquote {
+  padding: var(--spacing);
+  border-left: var(--spacing) solid var(--color-gray-9);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  background-color: var(--color-gray-1);
+}
+
 h1 {
   font-size: var(--font-size-1);
 }
@@ -344,18 +368,3 @@ hr {
   border: none;
   background-color: var(--color-gray-1);
 }
-
-a {
-  color: var(--color-blue-6);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--color-blue-5);
-}
-
-a:active {
-  color: var(--color-blue-8);
-}
-
-/* ... */
