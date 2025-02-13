@@ -670,7 +670,7 @@ wbr:last-child {
 }
 
 a {
-  color: var(--color-blue-6);
+  color: var(--color-indigo-6);
   text-decoration: none;
 }
 
@@ -722,15 +722,15 @@ button.dark {
 }
 
 button.info {
-  background-color: var(--color-grape-3);
-}
-
-button.link {
   background-color: var(--color-blue-4);
 }
 
+button.link {
+  background-color: var(--color-indigo-4);
+}
+
 button.primary {
-  background-color: var(--color-cyan-4);
+  background-color: var(--color-teal-4);
 }
 
 button.success {
