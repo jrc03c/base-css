@@ -8,7 +8,6 @@
 
   --border-radius: 4px;
   --shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-  --line-thickness: 2px;
 
   /* colors from: https://yeun.github.io/open-color/ */
 
@@ -452,7 +451,7 @@ h6 {
 
 hr {
   width: 100%;
-  height: var(--line-thickness);
+  height: var(--spacing-xs);
   margin: var(--spacing-lg) 0;
   border: none;
   border-radius: var(--border-radius);
