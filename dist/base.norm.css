@@ -843,6 +843,35 @@ dialog > button.close::before {
   content: "✕";
 }
 
+figure {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  gap: 0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+figure img {
+  border-radius: unset;
+}
+
+figure figcaption {
+  padding: var(--spacing);
+  border-top: var(--spacing-xs) solid var(--color-gray-7);
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  border-radius: unset;
+  text-align: center;
+  background-color: var(--color-gray-9);
+  color: var(--color-gray-6);
+}
+
 h1,
 h2,
 h3,
@@ -885,6 +914,11 @@ hr {
   border: none;
   border-radius: var(--border-radius);
   background-color: var(--color-gray-1);
+}
+
+img {
+  border-radius: var(--border-radius);
+  max-width: 100%;
 }
 
 pre:has(code) {

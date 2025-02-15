@@ -41,7 +41,7 @@ function rebuild() {
 
 if (process.argv.indexOf("-w") > -1 || process.argv.indexOf("--watch") > -1) {
   watch({
-    target: ".",
+    target: "src/base.css",
     exclude: [".git", "dist", "node_modules"],
     created: rebuild,
     modified: rebuild,
