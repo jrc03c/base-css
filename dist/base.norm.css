@@ -358,6 +358,7 @@ template {
   --spacing-xl: 6rem;
 
   --border-radius: 4px;
+  --line-thickness: 2px;
   --shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 
   /* colors from: https://yeun.github.io/open-color/ */
@@ -788,6 +789,48 @@ code {
   margin: 0 auto;
 }
 
+.control label {
+  margin-bottom: var(--spacing-xs);
+  display: block;
+  font-weight: 550;
+}
+
+.control:has(> input[type="checkbox"]) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.control .radio {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.control .radio input[type="radio"] {
+  width: 1em;
+  min-width: 1em;
+  max-width: 1em;
+  height: 1em;
+  min-height: 1em;
+  max-height: 1em;
+  position: relative;
+  top: calc(var(--line-thickness) * -1);
+}
+
+.control .radio label {
+  font-weight: 400;
+}
+
 dialog {
   position: fixed;
   left: 0;
@@ -955,6 +998,78 @@ img {
   max-width: 100%;
 }
 
+input {
+  padding: var(--spacing-sm);
+  border: var(--line-thickness) solid var(--color-gray-3);
+  border-radius: var(--border-radius);
+  background-color: var(--color-gray-0);
+}
+
+input:focus {
+  border: var(--line-thickness) solid var(--color-gray-6);
+}
+
+input[type="checkbox"] {
+  width: 1em;
+  min-width: 1em;
+  max-width: 1em;
+  height: 1em;
+  min-height: 1em;
+  max-height: 1em;
+  box-sizing: border-box;
+  position: relative;
+  top: calc(var(--line-thickness) * -1);
+}
+
+input[type="color"] {
+  padding: 0;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="url"] {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+input[disabled] {
+  filter: contrast(25%) brightness(150%);
+  cursor: not-allowed;
+}
+
+input.danger {
+  background-color: var(--color-red-0);
+  border: var(--line-thickness) solid var(--color-red-6);
+}
+
+input.info {
+  background-color: var(--color-blue-0);
+  border: var(--line-thickness) solid var(--color-blue-6);
+}
+
+input.link {
+  background-color: var(--color-indigo-0);
+  border: var(--line-thickness) solid var(--color-indigo-6);
+}
+
+input.primary {
+  background-color: var(--color-teal-0);
+  border: var(--line-thickness) solid var(--color-teal-6);
+}
+
+input.success {
+  background-color: var(--color-lime-0);
+  border: var(--line-thickness) solid var(--color-lime-6);
+}
+
+input.warning {
+  background-color: var(--color-yellow-0);
+  border: var(--line-thickness) solid var(--color-yellow-6);
+}
+
 pre:has(code) {
   display: block;
   margin: 0 0 var(--spacing) 0;
@@ -1016,6 +1131,29 @@ pre code {
 section {
   margin: 0;
   padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+textarea {
+  padding: var(--spacing-sm);
+  border: var(--line-thickness) solid var(--color-gray-3);
+  border-radius: var(--border-radius);
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  height: fit-content;
+  min-height: 128px;
+  max-height: fit-content;
+  box-sizing: border-box;
+  background-color: var(--color-gray-0);
+}
+
+textarea:focus {
+  border: var(--line-thickness) solid var(--color-gray-6);
+}
+
+textarea[disabled] {
+  filter: contrast(25%) brightness(150%);
+  cursor: not-allowed;
 }
 
 @media (max-width: 960px) {
