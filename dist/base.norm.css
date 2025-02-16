@@ -1070,6 +1070,28 @@ input.warning {
   border: var(--line-thickness) solid var(--color-yellow-6);
 }
 
+ol {
+  margin-left: var(--spacing);
+}
+
+ol li,
+ol li:last-child {
+  margin-bottom: var(--spacing-sm);
+}
+
+ol ol,
+ol ul {
+  margin: 0 0 0 var(--spacing);
+}
+
+ol ol li {
+  list-style-type: lower-alpha;
+}
+
+ol ol ol li {
+  list-style-type: lower-roman;
+}
+
 pre:has(code) {
   display: block;
   margin: 0 0 var(--spacing) 0;
@@ -1154,6 +1176,20 @@ textarea:focus {
 textarea[disabled] {
   filter: contrast(25%) brightness(150%);
   cursor: not-allowed;
+}
+
+ul {
+  margin-left: var(--spacing);
+}
+
+ul li,
+ul li:last-child {
+  margin-bottom: var(--spacing-sm);
+}
+
+ul ol,
+ul ul {
+  margin: 0 0 0 var(--spacing);
 }
 
 @media (max-width: 960px) {
