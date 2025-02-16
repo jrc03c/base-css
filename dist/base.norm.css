@@ -1242,6 +1242,132 @@ pre code {
   color: white;
 }
 
+progress {
+  --progress-border-radius: var(--border-radius);
+  --progress-bar-background-color: var(--color-gray-1);
+  --progress-value-background-color: var(--color-gray-6);
+}
+
+progress {
+  appearance: none;
+  border: none;
+  border-radius: calc(var(--spacing-sm) / 2);
+  display: block;
+  height: var(--spacing-sm);
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+progress::-webkit-progress-bar {
+  background-color: var(--progress-bar-background-color);
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--progress-value-background-color);
+}
+
+progress::-moz-progress-bar {
+  background-color: var(--progress-value-background-color);
+}
+
+progress::-ms-fill {
+  background-color: var(--progress-value-background-color);
+  border: none;
+}
+
+progress.danger {
+  --progress-value-background-color: var(--color-red-5);
+}
+
+progress.dark {
+  --progress-value-background-color: var(--color-gray-9);
+}
+
+progress.info {
+  --progress-value-background-color: var(--color-blue-5);
+}
+
+progress.light {
+  --progress-value-background-color: var(--color-gray-4);
+}
+
+progress.link {
+  --progress-value-background-color: var(--color-indigo-5);
+}
+
+progress.primary {
+  --progress-value-background-color: var(--color-teal-5);
+}
+
+progress.success {
+  --progress-value-background-color: var(--color-lime-5);
+}
+
+progress.warning {
+  --progress-value-background-color: var(--color-yellow-5);
+}
+
+/* progress {
+  --progress-value-background-color: var(--color-gray-6);
+}
+
+progress {
+  appearance: none;
+  display: block;
+  padding: 0;
+  border: 0;
+  border-radius: calc(var(--spacing-sm) / 2);
+  overflow: hidden;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  height: var(--spacing-sm);
+  background-color: var(--color-gray-1);
+}
+
+progress.danger {
+  --progress-value-background-color: var(--color-red-5);
+}
+
+progress.dark {
+  --progress-value-background-color: var(--color-gray-9);
+}
+
+progress.info {
+  --progress-value-background-color: var(--color-blue-5);
+}
+
+progress.light {
+  --progress-value-background-color: var(--color-gray-4);
+}
+
+progress.link {
+  --progress-value-background-color: var(--color-indigo-5);
+}
+
+progress.primary {
+  --progress-value-background-color: var(--color-teal-5);
+}
+
+progress.success {
+  --progress-value-background-color: var(--color-lime-5);
+}
+
+progress.warning {
+  --progress-value-background-color: var(--color-yellow-5);
+}
+
+progress::-webkit-progress-bar {
+  background-color: var(--color-gray-1);
+}
+
+progress::-webkit-progress-value,
+progress::-moz-progress-bar,
+progress::-ms-fill {
+  background-color: var(--progress-value-background-color);
+} */
+
 .row {
   display: flex;
   flex-direction: row;
