@@ -745,28 +745,16 @@ nav {
   gap: var(--spacing-lg);
 }
 
-nav.danger *,
-nav.light *,
-nav.primary *,
-nav.success *,
-nav.warning * {
+nav * {
   color: var(--color-gray-8);
 }
 
-nav.danger a:hover,
-nav.light a:hover,
-nav.primary a:hover,
-nav.success a:hover,
-nav.warning a:hover {
-  color: var(--color-gray-7);
+nav a:hover {
+  filter: brightness(calc(var(--brightness-hover) * 1.5));
 }
 
-nav.danger a:active,
-nav.light a:active,
-nav.primary a:active,
-nav.success a:active,
-nav.warning a:active {
-  color: var(--color-gray-9);
+nav a:active {
+  filter: brightness(calc(var(--brightness-active) * 0.75));
 }
 
 nav.dark *,
@@ -788,7 +776,7 @@ nav.link a:active {
 }
 
 nav.danger {
-  background-color: var(--color-red-4);
+  background-color: var(--color-red-5);
 }
 
 nav.dark {
@@ -1134,18 +1122,22 @@ ul ul {
   }
 
   nav > .nav-right > menu li a:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.05);
+    filter: none;
   }
 
   nav > .nav-right > menu li a:active {
     background-color: rgba(0, 0, 0, 0.1);
+    filter: none;
   }
 
-  nav.dark > .nav-right > menu li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+  nav.info > .nav-right > menu li a:hover,
+  nav.link > .nav-right > menu li a:hover {
+    color: var(--color-gray-8);
   }
 
-  nav.dark > .nav-right > menu li a:active {
-    background-color: rgba(0, 0, 0, 0.5);
+  nav.info > .nav-right > menu li a:active,
+  nav.link > .nav-right > menu li a:active {
+    color: var(--color-gray-8);
   }
 }
