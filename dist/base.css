@@ -160,6 +160,7 @@
   --min-button-width: 128px;
   --brightness-active: 90%;
   --brightness-hover: 105%;
+  --transition-duration: 0.1s;
 }
 
 /* Set styles for all elements. */
@@ -388,17 +389,19 @@ button.danger {
 
 button.dark {
   background-color: var(--color-gray-8);
-  color: var(--color-gray-0);
+  color: white;
   box-shadow: 0 var(--spacing-xs) 0 var(--color-gray-9);
 }
 
 button.info {
   background-color: var(--color-blue-4);
+  color: white;
   box-shadow: 0 var(--spacing-xs) 0 var(--color-blue-5);
 }
 
 button.link {
   background-color: var(--color-indigo-4);
+  color: white;
   box-shadow: 0 var(--spacing-xs) 0 var(--color-indigo-5);
 }
 
@@ -482,6 +485,185 @@ code {
 
 .control .radio label {
   font-weight: 400;
+}
+
+details {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background-color: var(--color-gray-1);
+}
+
+details summary {
+  margin: 0;
+  padding: var(--spacing);
+  background-color: var(--color-gray-2);
+  cursor: pointer;
+  user-select: none;
+}
+
+details summary::marker {
+  display: none !important;
+  opacity: 0;
+  content: "";
+}
+
+details summary::before {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 0 0.75em 0 0;
+  padding: 0;
+  width: 1em;
+  min-width: 1em;
+  max-width: 1em;
+  height: 1em;
+  min-height: 1em;
+  max-height: 1em;
+  line-height: 1em;
+  font-family: var(--font-sans-serif);
+  content: "❯";
+  transition: transform var(--transition-duration) ease-out;
+}
+
+details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+details[open] > *:not(summary),
+details[open] > *:not(summary):last-child {
+  margin: var(--spacing);
+}
+
+details.danger {
+  background-color: var(--color-red-4);
+}
+
+details.danger summary {
+  background-color: var(--color-red-5);
+}
+
+details.danger.light {
+  background-color: var(--color-red-1);
+}
+
+details.danger.light summary {
+  background-color: var(--color-red-2);
+}
+
+details.dark {
+  background-color: var(--color-gray-8);
+}
+
+details.dark summary {
+  background-color: var(--color-gray-9);
+}
+
+details.dark,
+details.dark * {
+  color: var(--color-gray-0);
+}
+
+details.info {
+  background-color: var(--color-blue-4);
+}
+
+details.info summary {
+  background-color: var(--color-blue-5);
+}
+
+details.info,
+details.info * {
+  color: var(--color-gray-0);
+}
+
+details.info.light {
+  background-color: var(--color-blue-1);
+}
+
+details.info.light summary {
+  background-color: var(--color-blue-2);
+}
+
+details.info.light,
+details.info.light * {
+  color: var(--color-gray-9);
+}
+
+details.link {
+  background-color: var(--color-indigo-4);
+}
+
+details.link summary {
+  background-color: var(--color-indigo-5);
+}
+
+details.link,
+details.link * {
+  color: var(--color-gray-0);
+}
+
+details.link.light {
+  background-color: var(--color-indigo-1);
+}
+
+details.link.light summary {
+  background-color: var(--color-indigo-2);
+}
+
+details.link.light,
+details.link.light * {
+  color: var(--color-gray-9);
+}
+
+details.primary {
+  background-color: var(--color-teal-4);
+}
+
+details.primary summary {
+  background-color: var(--color-teal-5);
+}
+
+details.primary.light {
+  background-color: var(--color-teal-1);
+}
+
+details.primary.light summary {
+  background-color: var(--color-teal-2);
+}
+
+details.success {
+  background-color: var(--color-lime-4);
+}
+
+details.success summary {
+  background-color: var(--color-lime-5);
+}
+
+details.success.light {
+  background-color: var(--color-lime-1);
+}
+
+details.success.light summary {
+  background-color: var(--color-lime-2);
+}
+
+details.warning {
+  background-color: var(--color-yellow-4);
+}
+
+details.warning summary {
+  background-color: var(--color-yellow-5);
+}
+
+details.warning.light {
+  background-color: var(--color-yellow-1);
+}
+
+details.warning.light summary {
+  background-color: var(--color-yellow-2);
 }
 
 dialog {
@@ -1266,8 +1448,8 @@ ul ul {
     left: 100vw;
     top: 4.5em;
     transition:
-      left 0.1s ease-out,
-      opacity 0.1s ease-out;
+      left var(--transition-duration) ease-out,
+      opacity var(--transition-duration) ease-out;
     padding: var(--spacing-sm) 0;
     width: 100vw;
     min-width: 100vw;
