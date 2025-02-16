@@ -655,6 +655,8 @@ input {
   padding: var(--spacing-sm);
   border: var(--line-thickness) solid var(--color-gray-3);
   border-radius: var(--border-radius);
+  max-width: 100%;
+  box-sizing: border-box;
   background-color: var(--color-gray-0);
 }
 
@@ -669,7 +671,6 @@ input[type="checkbox"] {
   height: 1em;
   min-height: 1em;
   max-height: 1em;
-  box-sizing: border-box;
   position: relative;
   top: calc(var(--line-thickness) * -1);
 }
@@ -696,6 +697,12 @@ input[disabled] {
 input.danger {
   background-color: var(--color-red-0);
   border: var(--line-thickness) solid var(--color-red-6);
+}
+
+input.dark {
+  background-color: var(--color-gray-8);
+  color: var(--color-gray-0);
+  border: var(--line-thickness) solid var(--color-gray-9);
 }
 
 input.info {
@@ -929,6 +936,60 @@ section {
   padding: var(--spacing-xl) var(--spacing-lg);
 }
 
+select {
+  padding: var(--spacing-sm);
+  border: var(--line-thickness) solid var(--color-gray-3);
+  border-radius: var(--border-radius);
+  max-width: 100%;
+  box-sizing: border-box;
+  background-color: var(--color-gray-0);
+}
+
+select:focus {
+  border: var(--line-thickness) solid var(--color-gray-6);
+}
+
+select[disabled] {
+  filter: contrast(25%) brightness(150%);
+  cursor: not-allowed;
+}
+
+select.danger {
+  background-color: var(--color-red-0);
+  border: var(--line-thickness) solid var(--color-red-6);
+}
+
+select.dark {
+  background-color: var(--color-gray-8);
+  color: var(--color-gray-0);
+  border: var(--line-thickness) solid var(--color-gray-9);
+}
+
+select.info {
+  background-color: var(--color-blue-0);
+  border: var(--line-thickness) solid var(--color-blue-6);
+}
+
+select.link {
+  background-color: var(--color-indigo-0);
+  border: var(--line-thickness) solid var(--color-indigo-6);
+}
+
+select.primary {
+  background-color: var(--color-teal-0);
+  border: var(--line-thickness) solid var(--color-teal-6);
+}
+
+select.success {
+  background-color: var(--color-lime-0);
+  border: var(--line-thickness) solid var(--color-lime-6);
+}
+
+select.warning {
+  background-color: var(--color-yellow-0);
+  border: var(--line-thickness) solid var(--color-yellow-6);
+}
+
 textarea {
   padding: var(--spacing-sm);
   border: var(--line-thickness) solid var(--color-gray-3);
@@ -950,6 +1011,42 @@ textarea:focus {
 textarea[disabled] {
   filter: contrast(25%) brightness(150%);
   cursor: not-allowed;
+}
+
+textarea.danger {
+  background-color: var(--color-red-0);
+  border: var(--line-thickness) solid var(--color-red-6);
+}
+
+textarea.dark {
+  background-color: var(--color-gray-8);
+  color: var(--color-gray-0);
+  border: var(--line-thickness) solid var(--color-gray-9);
+}
+
+textarea.info {
+  background-color: var(--color-blue-0);
+  border: var(--line-thickness) solid var(--color-blue-6);
+}
+
+textarea.link {
+  background-color: var(--color-indigo-0);
+  border: var(--line-thickness) solid var(--color-indigo-6);
+}
+
+textarea.primary {
+  background-color: var(--color-teal-0);
+  border: var(--line-thickness) solid var(--color-teal-6);
+}
+
+textarea.success {
+  background-color: var(--color-lime-0);
+  border: var(--line-thickness) solid var(--color-lime-6);
+}
+
+textarea.warning {
+  background-color: var(--color-yellow-0);
+  border: var(--line-thickness) solid var(--color-yellow-6);
 }
 
 ul {
