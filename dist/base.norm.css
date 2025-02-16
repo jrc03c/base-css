@@ -359,7 +359,6 @@ template {
 
   --border-radius: 4px;
   --line-thickness: 2px;
-  /* --shadow: 0 4px 8px rgba(0, 0, 0, 0.15); */
   --shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
 
   /* colors from: https://yeun.github.io/open-color/ */
@@ -1097,6 +1096,84 @@ nav {
   gap: var(--spacing-lg);
 }
 
+nav.danger *,
+nav.light *,
+nav.primary *,
+nav.success *,
+nav.warning * {
+  color: var(--color-gray-8);
+}
+
+nav.danger a:hover,
+nav.light a:hover,
+nav.primary a:hover,
+nav.success a:hover,
+nav.warning a:hover {
+  color: var(--color-gray-7);
+}
+
+nav.danger a:active,
+nav.light a:active,
+nav.primary a:active,
+nav.success a:active,
+nav.warning a:active {
+  color: var(--color-gray-9);
+}
+
+nav.dark *,
+nav.info *,
+nav.link * {
+  color: var(--color-gray-1);
+}
+
+nav.dark a:hover,
+nav.info a:hover,
+nav.link a:hover {
+  color: var(--color-gray-0);
+}
+
+nav.dark a:active,
+nav.info a:active,
+nav.link a:active {
+  color: var(--color-gray-2);
+}
+
+nav.danger {
+  background-color: var(--color-red-4);
+}
+
+nav.dark {
+  background-color: var(--color-gray-8);
+}
+
+nav.dark * {
+  color: var(--color-gray-1);
+}
+
+nav.info {
+  background-color: var(--color-blue-4);
+}
+
+nav.light {
+  background-color: var(--color-gray-1);
+}
+
+nav.link {
+  background-color: var(--color-indigo-4);
+}
+
+nav.primary {
+  background-color: var(--color-teal-3);
+}
+
+nav.success {
+  background-color: var(--color-lime-4);
+}
+
+nav.warning {
+  background-color: var(--color-yellow-4);
+}
+
 nav > .nav-left,
 nav > .nav-right {
   margin: 0;
@@ -1253,6 +1330,10 @@ ul ul {
 }
 
 @media (max-width: 960px) {
+  section {
+    padding: var(--spacing-lg) var(--spacing);
+  }
+
   .container {
     width: 100%;
     min-width: 100%;
@@ -1340,6 +1421,48 @@ ul ul {
     pointer-events: none;
   }
 
+  nav.danger menu {
+    background-color: var(--color-red-0);
+  }
+
+  nav.dark menu {
+    background-color: var(--color-gray-7);
+  }
+
+  nav.info menu {
+    background-color: var(--color-blue-0);
+  }
+
+  nav.info menu,
+  nav.info menu * {
+    color: var(--color-gray-7);
+  }
+
+  nav.light menu {
+    background-color: var(--color-gray-0);
+  }
+
+  nav.link menu {
+    background-color: var(--color-indigo-0);
+  }
+
+  nav.link menu,
+  nav.link menu * {
+    color: var(--color-gray-7);
+  }
+
+  nav.primary menu {
+    background-color: var(--color-teal-0);
+  }
+
+  nav.success menu {
+    background-color: var(--color-lime-0);
+  }
+
+  nav.warning menu {
+    background-color: var(--color-yellow-0);
+  }
+
   nav > .nav-right > menu.is-active {
     left: 0;
     opacity: 1;
@@ -1352,14 +1475,6 @@ ul ul {
     max-width: 100%;
   }
 
-  nav > .nav-right > menu li:hover {
-    background-color: var(--color-gray-0);
-  }
-
-  nav > .nav-right > menu li:active {
-    background-color: var(--color-gray-1);
-  }
-
   nav > .nav-right > menu li a {
     display: inline-block;
     width: 100%;
@@ -1367,5 +1482,21 @@ ul ul {
     max-width: 100%;
     padding: var(--spacing-sm) var(--spacing);
     box-sizing: border-box;
+  }
+
+  nav > .nav-right > menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  nav > .nav-right > menu li a:active {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  nav.dark > .nav-right > menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  nav.dark > .nav-right > menu li a:active {
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
