@@ -1,6 +1,7 @@
 import { execSync } from "node:child_process"
 import { watch } from "@jrc03c/watch"
 import fs from "node:fs"
+import path from "node:path"
 import process from "node:process"
 
 function rebuild() {
@@ -33,6 +34,23 @@ function rebuild() {
       `npx esbuild dist/base.norm.css --minify --outfile=dist/base.norm.min.css`,
     )
 
+    // (5) index.html
+    const template = fs.readFileSync("demo/index.html", "utf8")
+    const includes = template.match(/\{%\s*?include.*?%\}/g)
+    let out = template.slice()
+
+    includes.forEach(i => {
+      const file = path.join(
+        "demo",
+        i.split("include")[1].split("%}")[0].trim(),
+      )
+
+      const raw = fs.readFileSync(file, "utf8")
+      out = out.replaceAll(i, raw)
+    })
+
+    fs.writeFileSync("index.html", out, "utf8")
+
     console.log("\nDone! 🎉\n")
   } catch (e) {
     console.error(e)
@@ -41,8 +59,8 @@ function rebuild() {
 
 if (process.argv.indexOf("-w") > -1 || process.argv.indexOf("--watch") > -1) {
   watch({
-    target: "src/base.css",
-    exclude: [".git", "dist", "node_modules"],
+    target: ".",
+    include: ["demo", "src"],
     created: rebuild,
     modified: rebuild,
     deleted: rebuild,

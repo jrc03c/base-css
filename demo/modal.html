@@ -1,0 +1,117 @@
+<div>
+  <style>
+    dialog .box {
+      width: 50vw;
+      min-width: 50vw;
+      max-width: 50vw;
+      max-height: calc(100vh - calc(var(--spacing) * 4));
+      overflow-y: auto;
+    }
+
+    @media (max-width: 768px) {
+      dialog .box {
+        width: calc(100vw - calc(var(--spacing) * 4));
+        min-width: calc(100vw - calc(var(--spacing) * 4));
+        max-width: calc(100vw - calc(var(--spacing) * 4));
+      }
+    }
+  </style>
+
+  <div>
+    <button id="modal-show-button">Show modal</button>
+  </div>
+
+  <dialog>
+    <button class="close" id="modal-close-button"></button>
+
+    <div class="box">
+      <p><b>Nietzsche Ipsum</b></p>
+
+      <p>
+        Spirit eternal-return holiest zarathustra aversion faithful overcome
+        transvaluation christian. Dead faith eternal-return morality fearful
+        faithful. Joy justice evil reason war horror. Ultimate ascetic madness
+        salvation of. Pious strong fearful will value god merciful pious
+        contradict victorious madness. Reason god contradict right holiest.
+      </p>
+
+      <p>
+        Grandeur self noble suicide law sexuality. Ultimate christianity hope
+        play ideal.
+      </p>
+
+      <p>
+        Moral christianity convictions self selfish faith society overcome hope
+        battle play. Hatred moral hatred ideal joy ubermensch salvation moral.
+      </p>
+
+      <p>
+        Fearful self abstract chaos ocean selfish sexuality philosophy society.
+        Snare transvaluation pious suicide free deceptions suicide ideal horror
+        war strong ubermensch sexuality. Victorious snare oneself battle gains.
+        Eternal-return contradict free hatred salvation.
+      </p>
+
+      <p>
+        Decrepit god will noble strong virtues convictions will spirit abstract
+        love. Convictions ultimate depths horror hope good ocean overcome.
+        Ascetic free insofar christianity ultimate. Justice ocean good depths
+        horror zarathustra. Good madness eternal-return self spirit christianity
+        burying pious. Hope disgust passion society grandeur decieve madness.
+        Spirit fearful ultimate love good snare ascetic decieve sexuality
+        burying convictions sea value.
+      </p>
+
+      <p>
+        Abstract battle ascetic marvelous burying hope. Disgust passion overcome
+        decieve faith justice of evil dead. Ubermensch horror snare burying
+        society horror ideal against. Hatred enlightenment faithful insofar
+        inexpedient sexuality deceptions holiest free. Superiority pinnacle
+        enlightenment truth joy god gains.
+      </p>
+
+      <p>
+        Merciful suicide chaos self ascetic passion prejudice. Dead virtues
+        madness pinnacle endless overcome derive law dead. Love contradict
+        pinnacle hatred endless. Reason law war burying self will joy passion
+        reason passion. Decrepit law society decrepit will convictions abstract
+        spirit faithful strong horror faith decieve burying. Faithful mountains
+        decieve truth battle war abstract ideal insofar.
+      </p>
+
+      <p>
+        Passion right noble marvelous hope philosophy ultimate philosophy
+        ascetic christian fearful hatred oneself. Will pinnacle joy will love
+        oneself insofar christian victorious joy pinnacle. Sea horror deceptions
+        faithful law. Chaos suicide sexuality madness ideal justice chaos.
+        Philosophy battle ultimate battle hatred enlightenment. Ultimate ideal
+        society.
+      </p>
+
+      <p>
+        <b>Source:</b>
+        <a href="http://nietzsche-ipsum.com/">nietzsche-ipsum.com</a>
+      </p>
+    </div>
+  </dialog>
+
+  <script>
+    const modalShowButton = document.querySelector("#modal-show-button")
+    const modalCloseButton = document.querySelector("#modal-close-button")
+    const dialog = document.querySelector("dialog")
+
+    modalShowButton.addEventListener("click", () => {
+      dialog.showModal()
+    })
+
+    modalCloseButton.addEventListener("click", () => {
+      dialog.close()
+    })
+
+    dialog.addEventListener("click", event => {
+      if (event.target === dialog) {
+        dialog.close()
+      }
+    })
+  </script>
+</div>

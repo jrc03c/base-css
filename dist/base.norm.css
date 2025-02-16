@@ -913,7 +913,7 @@ details.dark summary {
 }
 
 details.dark,
-details.dark * {
+details.dark *:not(a) {
   color: var(--color-gray-0);
 }
 
@@ -926,7 +926,7 @@ details.info summary {
 }
 
 details.info,
-details.info * {
+details.info *:not(a) {
   color: var(--color-gray-0);
 }
 
@@ -939,7 +939,7 @@ details.info.light summary {
 }
 
 details.info.light,
-details.info.light * {
+details.info.light *:not(a) {
   color: var(--color-gray-9);
 }
 
@@ -952,7 +952,7 @@ details.link summary {
 }
 
 details.link,
-details.link * {
+details.link *:not(a) {
   color: var(--color-gray-0);
 }
 
@@ -965,7 +965,7 @@ details.link.light summary {
 }
 
 details.link.light,
-details.link.light * {
+details.link.light *:not(a) {
   color: var(--color-gray-9);
 }
 

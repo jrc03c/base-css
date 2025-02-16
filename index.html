@@ -7,63 +7,64 @@
   </head>
   <body>
     <nav class="light">
-      <div class="nav-left">
-        <a href=""><b>base.css</b></a>
-      </div>
+  <div class="nav-left">
+    <a href=""><b>base.css</b></a>
+  </div>
 
-      <div class="nav-right">
-        <button class="nav-burger"></button>
+  <div class="nav-right">
+    <button class="nav-burger"></button>
 
-        <menu>
-          <li>
-            <a href="">Home</a>
-          </li>
+    <menu>
+      <li>
+        <a href="">Home</a>
+      </li>
 
-          <li>
-            <a href="">About</a>
-          </li>
+      <li>
+        <a href="">About</a>
+      </li>
 
-          <li>
-            <a href="">Documentation</a>
-          </li>
+      <li>
+        <a href="">Documentation</a>
+      </li>
 
-          <li>
-            <a href="">FAQ</a>
-          </li>
+      <li>
+        <a href="">FAQ</a>
+      </li>
 
-          <li>
-            <a href="">Contact</a>
-          </li>
-        </menu>
-      </div>
+      <li>
+        <a href="">Contact</a>
+      </li>
+    </menu>
+  </div>
 
-      <script>
-        const nav = document.querySelector("nav")
-        const burger = nav.querySelector(".nav-burger")
-        const menu = nav.querySelector("menu")
-        let navMenuIsVisible = false
+  <script>
+    const nav = document.querySelector("nav")
+    const burger = nav.querySelector(".nav-burger")
+    const menu = nav.querySelector("menu")
+    let navMenuIsVisible = false
 
-        const toggle = () => {
-          navMenuIsVisible = !navMenuIsVisible
+    const toggle = () => {
+      navMenuIsVisible = !navMenuIsVisible
 
-          if (navMenuIsVisible) {
-            burger.classList.add("is-active")
-            menu.classList.add("is-active")
-          } else {
-            burger.classList.remove("is-active")
-            menu.classList.remove("is-active")
-          }
-        }
+      if (navMenuIsVisible) {
+        burger.classList.add("is-active")
+        menu.classList.add("is-active")
+      } else {
+        burger.classList.remove("is-active")
+        menu.classList.remove("is-active")
+      }
+    }
 
-        burger.addEventListener("click", toggle)
+    burger.addEventListener("click", toggle)
 
-        window.addEventListener("keydown", event => {
-          if (event.key === "Escape" && navMenuIsVisible) {
-            toggle()
-          }
-        })
-      </script>
-    </nav>
+    window.addEventListener("keydown", event => {
+      if (event.key === "Escape" && navMenuIsVisible) {
+        toggle()
+      }
+    })
+  </script>
+</nav>
+
 
     <section>
       <div class="container">
@@ -71,885 +72,844 @@
 
         <hr />
 
+        <!-- prettier-ignore -->
         <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-        <h5>Heading 5</h5>
-        <h6>Heading 6</h6>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
 
-        <hr />
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-          condimentum faucibus tellus, non consectetur felis pharetra ac.
-          Aliquam dapibus dignissim rhoncus. Cras interdum ante vitae libero
-          gravida, eget posuere metus tempus. Maecenas in fermentum eros, a
-          commodo massa. Aliquam eu gravida urna. Sed porttitor pulvinar sem, a
-          sodales risus semper eu. Vivamus auctor a enim id lobortis. Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet
-          varius justo, eget dapibus arcu. Duis cursus elementum dolor, et
-          convallis mi pharetra ut. Nunc mattis at elit scelerisque fermentum.
-          Mauris luctus enim augue, sit amet condimentum lorem sollicitudin
-          eget. Proin nisl sem, vestibulum vitae orci semper, dictum scelerisque
-          ex. Ut nec justo libero. Phasellus libero libero, placerat vel
-          porttitor rhoncus, rutrum ac nibh. In id fringilla urna. Suspendisse
-          nec euismod nisl. Nunc neque arcu, consequat non feugiat id, sodales
-          ac ante. Aenean et ipsum id purus vulputate imperdiet eu vel diam.
-          Donec lectus dolor, egestas sed tellus lobortis, cursus porta quam.
-          Donec gravida dapibus nulla, ac laoreet massa accumsan at. Vestibulum
-          ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-          curae; Donec commodo porta libero, non maximus lacus lacinia a.
-          Pellentesque augue velit, pellentesque a dui et, semper vulputate leo.
-          In sed massa cursus, mollis lectus quis, sollicitudin mi.
-        </p>
-
+        
         <blockquote>
-          <!-- prettier-ignore -->
-          <p>
-        <b>
-          Gideon the Ninth<br>
-          <span style="color: var(--color-gray-5);">by Tamsyn Muir</span>
-        </b>
+  <p>
+    <b>
+      Gideon the Ninth
+      <br />
+      <span style="color: var(--color-gray-5)">by Tamsyn Muir</span>
+    </b>
+  </p>
+
+  <p>
+    In the myriadic year of our Lord — the ten thousandth year of the King
+    Undying, the kindly Prince of Death! — Gideon Nav packed her sword, her
+    shoes, and her dirty magazines, and she escaped from the House of the Ninth.
+  </p>
+
+  <p>
+    She didn't run. Gideon never ran unless she had to. In the absolute darkness
+    before dawn she brushed her teeth without concern and splashed her face with
+    water, and even went so far as to sweep the dust off the floor of her cell.
+    She shook out her big black church robe and hung it from the hook. Having
+    done this every day for over a decade, she no longer needed light to do it
+    by. This late in the equinox no light would make it here for months, in any
+    case; you could tell the season by how hard the heating vents were creaking.
+    She dressed herself from head to toe in polymer and synthetic weave. She
+    combed her hair. Then Gideon whistled through her teeth as she unlocked her
+    security cuff, and arranged it and its stolen key considerately on her
+    pillow, like a chocolate in a fancy hotel.
+  </p>
+
+  <p>
+    Leaving her cell and swinging her pack over one shoulder, she took the time
+    to walk down five flights to her mother's nameless catacomb niche. This was
+    pure sentiment, as her mother hadn't been there since Gideon was little and
+    would never go back in it now. Then came the long hike up twenty-two flights
+    the back way, not one light relieving the greasy dark, heading to the
+    splitoff shaft and the pit where her ride would arrive: the shuttle was due
+    in two hours.
+  </p>
+</blockquote>
+
+        <div>
+  <style>
+    #button-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-content: flex-start;
+      align-items: flex-start;
+      gap: var(--spacing-sm) var(--spacing-xs);
+    }
+  </style>
+
+  <div id="button-container">
+    <button>Button</button>
+
+    <button class="dark">Dark</button>
+
+    <button class="danger">Danger</button>
+
+    <button class="warning">Warning</button>
+
+    <button class="success">Success</button>
+
+    <button class="primary">Primary</button>
+
+    <button class="info">Info</button>
+
+    <button class="link">Link</button>
+  </div>
+</div>
+
+        <div>
+  <p>
+    Here's a
+    <code>code</code>
+    block:
+  </p>
+
+  <pre>
+    <code>
+      function fib(n) {
+        if (n < 3) return 1
+        return fib(n - 1) + fib(n - 2)
+      }
+    </code>
+  </pre>
+
+  <script>
+    // This script just removes the extra whitespace around the code so that
+    // it displays as expected.
+    const pre = document.querySelector("pre")
+    const code = pre.querySelector("code")
+
+    Array.from(pre.childNodes).forEach(child => {
+      if (child.textContent.trim().length === 0) {
+        pre.removeChild(child)
+      }
+    })
+
+    const lines = code.textContent.split("\n").slice(1, -1)
+
+    const indentation = Math.min(
+      ...lines
+        .filter(line => line.trim().length > 0)
+        .map(line => line.match(/^(\s| )+/g)[0].length),
+    )
+
+    code.textContent = lines
+      .map(line => (line.trim().length === 0 ? line : line.slice(indentation)))
+      .join("\n")
+  </script>
+</div>
+
+        <div>
+  <style>
+    dialog .box {
+      width: 50vw;
+      min-width: 50vw;
+      max-width: 50vw;
+      max-height: calc(100vh - calc(var(--spacing) * 4));
+      overflow-y: auto;
+    }
+
+    @media (max-width: 768px) {
+      dialog .box {
+        width: calc(100vw - calc(var(--spacing) * 4));
+        min-width: calc(100vw - calc(var(--spacing) * 4));
+        max-width: calc(100vw - calc(var(--spacing) * 4));
+      }
+    }
+  </style>
+
+  <div>
+    <button id="modal-show-button">Show modal</button>
+  </div>
+
+  <dialog>
+    <button class="close" id="modal-close-button"></button>
+
+    <div class="box">
+      <p><b>Nietzsche Ipsum</b></p>
+
+      <p>
+        Spirit eternal-return holiest zarathustra aversion faithful overcome
+        transvaluation christian. Dead faith eternal-return morality fearful
+        faithful. Joy justice evil reason war horror. Ultimate ascetic madness
+        salvation of. Pious strong fearful will value god merciful pious
+        contradict victorious madness. Reason god contradict right holiest.
       </p>
 
-          <p>
-            In the myriadic year of our Lord — the ten thousandth year of the
-            King Undying, the kindly Prince of Death! — Gideon Nav packed her
-            sword, her shoes, and her dirty magazines, and she escaped from the
-            House of the Ninth.
-          </p>
+      <p>
+        Grandeur self noble suicide law sexuality. Ultimate christianity hope
+        play ideal.
+      </p>
 
-          <p>
-            She didn't run. Gideon never ran unless she had to. In the absolute
-            darkness before dawn she brushed her teeth without concern and
-            splashed her face with water, and even went so far as to sweep the
-            dust off the floor of her cell. She shook out her big black church
-            robe and hung it from the hook. Having done this every day for over
-            a decade, she no longer needed light to do it by. This late in the
-            equinox no light would make it here for months, in any case; you
-            could tell the season by how hard the heating vents were creaking.
-            She dressed herself from head to toe in polymer and synthetic weave.
-            She combed her hair. Then Gideon whistled through her teeth as she
-            unlocked her security cuff, and arranged it and its stolen key
-            considerately on her pillow, like a chocolate in a fancy hotel.
-          </p>
+      <p>
+        Moral christianity convictions self selfish faith society overcome hope
+        battle play. Hatred moral hatred ideal joy ubermensch salvation moral.
+      </p>
 
-          <p>
-            Leaving her cell and swinging her pack over one shoulder, she took
-            the time to walk down five flights to her mother's nameless catacomb
-            niche. This was pure sentiment, as her mother hadn't been there
-            since Gideon was little and would never go back in it now. Then came
-            the long hike up twenty-two flights the back way, not one light
-            relieving the greasy dark, heading to the splitoff shaft and the pit
-            where her ride would arrive: the shuttle was due in two hours.
-          </p>
-        </blockquote>
+      <p>
+        Fearful self abstract chaos ocean selfish sexuality philosophy society.
+        Snare transvaluation pious suicide free deceptions suicide ideal horror
+        war strong ubermensch sexuality. Victorious snare oneself battle gains.
+        Eternal-return contradict free hatred salvation.
+      </p>
 
-        <div>
-          <style>
-            #button-container {
-              display: flex;
-              flex-direction: row;
-              flex-wrap: wrap;
-              justify-content: flex-start;
-              align-content: flex-start;
-              align-items: flex-start;
-              gap: var(--spacing-sm) var(--spacing-xs);
-            }
-          </style>
+      <p>
+        Decrepit god will noble strong virtues convictions will spirit abstract
+        love. Convictions ultimate depths horror hope good ocean overcome.
+        Ascetic free insofar christianity ultimate. Justice ocean good depths
+        horror zarathustra. Good madness eternal-return self spirit christianity
+        burying pious. Hope disgust passion society grandeur decieve madness.
+        Spirit fearful ultimate love good snare ascetic decieve sexuality
+        burying convictions sea value.
+      </p>
 
-          <div id="button-container">
-            <button>Button</button>
+      <p>
+        Abstract battle ascetic marvelous burying hope. Disgust passion overcome
+        decieve faith justice of evil dead. Ubermensch horror snare burying
+        society horror ideal against. Hatred enlightenment faithful insofar
+        inexpedient sexuality deceptions holiest free. Superiority pinnacle
+        enlightenment truth joy god gains.
+      </p>
 
-            <button class="dark">Dark</button>
+      <p>
+        Merciful suicide chaos self ascetic passion prejudice. Dead virtues
+        madness pinnacle endless overcome derive law dead. Love contradict
+        pinnacle hatred endless. Reason law war burying self will joy passion
+        reason passion. Decrepit law society decrepit will convictions abstract
+        spirit faithful strong horror faith decieve burying. Faithful mountains
+        decieve truth battle war abstract ideal insofar.
+      </p>
 
-            <button class="danger">Danger</button>
+      <p>
+        Passion right noble marvelous hope philosophy ultimate philosophy
+        ascetic christian fearful hatred oneself. Will pinnacle joy will love
+        oneself insofar christian victorious joy pinnacle. Sea horror deceptions
+        faithful law. Chaos suicide sexuality madness ideal justice chaos.
+        Philosophy battle ultimate battle hatred enlightenment. Ultimate ideal
+        society.
+      </p>
 
-            <button class="warning">Warning</button>
+      <p>
+        <b>Source:</b>
+        <a href="http://nietzsche-ipsum.com/">nietzsche-ipsum.com</a>
+      </p>
+    </div>
+  </dialog>
 
-            <button class="success">Success</button>
+  <script>
+    const modalShowButton = document.querySelector("#modal-show-button")
+    const modalCloseButton = document.querySelector("#modal-close-button")
+    const dialog = document.querySelector("dialog")
 
-            <button class="primary">Primary</button>
+    modalShowButton.addEventListener("click", () => {
+      dialog.showModal()
+    })
 
-            <button class="info">Info</button>
+    modalCloseButton.addEventListener("click", () => {
+      dialog.close()
+    })
 
-            <button class="link">Link</button>
-          </div>
-        </div>
-
-        <div>
-          <p>
-            Here's a
-            <code>code</code>
-            block:
-          </p>
-
-          <pre>
-        <code>
-          function fib(n) {
-            if (n < 3) return 1
-            return fib(n - 1) + fib(n - 2)
-          }
-        </code>
-      </pre>
-
-          <script>
-            // This script just removes the extra whitespace around the code so that
-            // it displays as expected.
-            const pre = document.querySelector("pre")
-            const code = pre.querySelector("code")
-
-            Array.from(pre.childNodes).forEach(child => {
-              if (child.textContent.trim().length === 0) {
-                pre.removeChild(child)
-              }
-            })
-
-            const lines = code.textContent.split("\n").slice(1, -1)
-
-            const indentation = Math.min(
-              ...lines
-                .filter(line => line.trim().length > 0)
-                .map(line => line.match(/^(\s| )+/g)[0].length),
-            )
-
-            code.textContent = lines
-              .map(line =>
-                line.trim().length === 0 ? line : line.slice(indentation),
-              )
-              .join("\n")
-          </script>
-        </div>
+    dialog.addEventListener("click", event => {
+      if (event.target === dialog) {
+        dialog.close()
+      }
+    })
+  </script>
+</div>
 
         <div>
-          <style>
-            dialog .box {
-              width: 50vw;
-              min-width: 50vw;
-              max-width: 50vw;
-              max-height: calc(100vh - calc(var(--spacing) * 4));
-              overflow-y: auto;
-            }
+  <figure>
+    <img src="" />
+    <figcaption>A randomly-generated pattern</figcaption>
+  </figure>
 
-            @media (max-width: 768px) {
-              dialog .box {
-                width: calc(100vw - calc(var(--spacing) * 4));
-                min-width: calc(100vw - calc(var(--spacing) * 4));
-                max-width: calc(100vw - calc(var(--spacing) * 4));
-              }
-            }
-          </style>
+  <script>
+    const figure = document.querySelector("figure")
+    const img = figure.querySelector("img")
+    const canvas = document.createElement("canvas")
+    const width = 960
+    const height = 320
+    canvas.width = width
+    canvas.height = height
 
-          <div>
-            <button id="modal-show-button">Show modal</button>
-          </div>
+    const context = canvas.getContext("2d")
+    const blockSize = width / 32
+    context.fillStyle = "rgb(235, 235, 235)"
+    context.fillRect(0, 0, width, height)
 
-          <dialog>
-            <button class="close" id="modal-close-button"></button>
+    for (let x = 0; x < width + blockSize; x += blockSize) {
+      for (let y = 0; y < height + blockSize; y += blockSize) {
+        const v = Math.random() * (256 - 64) + 64
+        context.beginPath()
+        context.arc(x, y, blockSize / 4, 0, Math.PI * 2)
+        context.fillStyle = `rgb(${v}, ${v}, ${v})`
+        context.fill()
+      }
+    }
 
-            <div class="box">
-              <p><b>Nietzsche Ipsum</b></p>
-
-              <p>
-                Spirit eternal-return holiest zarathustra aversion faithful
-                overcome transvaluation christian. Dead faith eternal-return
-                morality fearful faithful. Joy justice evil reason war horror.
-                Ultimate ascetic madness salvation of. Pious strong fearful will
-                value god merciful pious contradict victorious madness. Reason
-                god contradict right holiest.
-              </p>
-
-              <p>
-                Grandeur self noble suicide law sexuality. Ultimate christianity
-                hope play ideal.
-              </p>
-
-              <p>
-                Moral christianity convictions self selfish faith society
-                overcome hope battle play. Hatred moral hatred ideal joy
-                ubermensch salvation moral.
-              </p>
-
-              <p>
-                Fearful self abstract chaos ocean selfish sexuality philosophy
-                society. Snare transvaluation pious suicide free deceptions
-                suicide ideal horror war strong ubermensch sexuality. Victorious
-                snare oneself battle gains. Eternal-return contradict free
-                hatred salvation.
-              </p>
-
-              <p>
-                Decrepit god will noble strong virtues convictions will spirit
-                abstract love. Convictions ultimate depths horror hope good
-                ocean overcome. Ascetic free insofar christianity ultimate.
-                Justice ocean good depths horror zarathustra. Good madness
-                eternal-return self spirit christianity burying pious. Hope
-                disgust passion society grandeur decieve madness. Spirit fearful
-                ultimate love good snare ascetic decieve sexuality burying
-                convictions sea value.
-              </p>
-
-              <p>
-                Abstract battle ascetic marvelous burying hope. Disgust passion
-                overcome decieve faith justice of evil dead. Ubermensch horror
-                snare burying society horror ideal against. Hatred enlightenment
-                faithful insofar inexpedient sexuality deceptions holiest free.
-                Superiority pinnacle enlightenment truth joy god gains.
-              </p>
-
-              <p>
-                Merciful suicide chaos self ascetic passion prejudice. Dead
-                virtues madness pinnacle endless overcome derive law dead. Love
-                contradict pinnacle hatred endless. Reason law war burying self
-                will joy passion reason passion. Decrepit law society decrepit
-                will convictions abstract spirit faithful strong horror faith
-                decieve burying. Faithful mountains decieve truth battle war
-                abstract ideal insofar.
-              </p>
-
-              <p>
-                Passion right noble marvelous hope philosophy ultimate
-                philosophy ascetic christian fearful hatred oneself. Will
-                pinnacle joy will love oneself insofar christian victorious joy
-                pinnacle. Sea horror deceptions faithful law. Chaos suicide
-                sexuality madness ideal justice chaos. Philosophy battle
-                ultimate battle hatred enlightenment. Ultimate ideal society.
-              </p>
-
-              <p>
-                <b>Source:</b>
-                <a href="http://nietzsche-ipsum.com/">nietzsche-ipsum.com</a>
-              </p>
-            </div>
-          </dialog>
-
-          <script>
-            const modalShowButton = document.querySelector("#modal-show-button")
-            const modalCloseButton = document.querySelector(
-              "#modal-close-button",
-            )
-            const dialog = document.querySelector("dialog")
-
-            modalShowButton.addEventListener("click", () => {
-              dialog.showModal()
-            })
-
-            modalCloseButton.addEventListener("click", () => {
-              dialog.close()
-            })
-
-            dialog.addEventListener("click", event => {
-              if (event.target === dialog) {
-                dialog.close()
-              }
-            })
-          </script>
-        </div>
-
-        <div>
-          <figure>
-            <img src="" />
-            <figcaption>A randomly-generated pattern</figcaption>
-          </figure>
-
-          <script>
-            const figure = document.querySelector("figure")
-            const img = figure.querySelector("img")
-            const canvas = document.createElement("canvas")
-            const width = 960
-            const height = 320
-            canvas.width = width
-            canvas.height = height
-
-            const context = canvas.getContext("2d")
-            const blockSize = width / 32
-            context.fillStyle = "rgb(235, 235, 235)"
-            context.fillRect(0, 0, width, height)
-
-            for (let x = 0; x < width + blockSize; x += blockSize) {
-              for (let y = 0; y < height + blockSize; y += blockSize) {
-                const v = Math.random() * (256 - 64) + 64
-                context.beginPath()
-                context.arc(x, y, blockSize / 4, 0, Math.PI * 2)
-                context.fillStyle = `rgb(${v}, ${v}, ${v})`
-                context.fill()
-              }
-            }
-
-            img.src = canvas.toDataURL()
-          </script>
-        </div>
+    img.src = canvas.toDataURL()
+  </script>
+</div>
 
         <div class="box">
-          <div class="control">
-            <input type="checkbox" />
-            <label>Will be attending</label>
-          </div>
+  <div class="control">
+    <input type="checkbox" />
+    <label>Will be attending</label>
+  </div>
 
-          <div class="control">
-            <label>Favorite color</label>
-            <input type="color" />
-          </div>
+  <div class="control">
+    <label>Favorite color</label>
+    <input type="color" />
+  </div>
 
-          <div class="control">
-            <label>Date of birth</label>
-            <input type="date" />
-          </div>
+  <div class="control">
+    <label>Date of birth</label>
+    <input type="date" />
+  </div>
 
-          <div class="control">
-            <label>Email address</label>
-            <input placeholder="someone@example.com" ="email" />
-          </div>
+  <div class="control">
+    <label>Email address</label>
+    <input placeholder="someone@example.com" ="email" />
+  </div>
 
-          <div class="control">
-            <label>A picture of your driver's license</label>
-            <input type="file" />
-          </div>
+  <div class="control">
+    <label>A picture of your driver's license</label>
+    <input type="file" />
+  </div>
 
-          <div class="control">
-            <label>Age</label>
-            <input type="number" max="150" min="0" placeholder="18" step="1" />
-          </div>
+  <div class="control">
+    <label>Age</label>
+    <input type="number" max="150" min="0" placeholder="18" step="1" />
+  </div>
 
-          <div class="control">
-            <label>Your password</label>
-            <input placeholder="p4$$w0rd!" type="password" />
-          </div>
+  <div class="control">
+    <label>Your password</label>
+    <input placeholder="p4$w0rd!" type="password" />
+  </div>
 
-          <div class="control">
-            <label>Your meal preference:</label>
+  <div class="control">
+    <label>Your meal preference:</label>
 
-            <div class="radio">
-              <input name="meal-preference" type="radio" />
-              <label>Chicken</label>
-            </div>
+    <div class="radio">
+      <input name="meal-preference" type="radio" />
+      <label>Chicken</label>
+    </div>
 
-            <div class="radio">
-              <input name="meal-preference" type="radio" />
-              <label>Beef</label>
-            </div>
+    <div class="radio">
+      <input name="meal-preference" type="radio" />
+      <label>Beef</label>
+    </div>
 
-            <div class="radio">
-              <input name="meal-preference" type="radio" />
-              <label>Fish</label>
-            </div>
-          </div>
+    <div class="radio">
+      <input name="meal-preference" type="radio" />
+      <label>Fish</label>
+    </div>
+  </div>
 
-          <div class="control">
-            <label>Your level of excitement</label>
-            <input type="range" max="10" min="0" step="1" />
-          </div>
+  <div class="control">
+    <label>Your level of excitement</label>
+    <input type="range" max="10" min="0" step="1" />
+  </div>
 
-          <div class="control">
-            <label>Phone number</label>
-            <input placeholder="123-456-7890" type="tel" />
-          </div>
+  <div class="control">
+    <label>Phone number</label>
+    <input placeholder="123-456-7890" type="tel" />
+  </div>
 
-          <div class="control">
-            <label>A short comment</label>
+  <div class="control">
+    <label>A short comment</label>
 
-            <input
-              placeholder="It was the best of times; it was the worst of times."
-              type="text" />
-          </div>
+    <input
+      placeholder="It was the best of times; it was the worst of times."
+      type="text" />
+  </div>
 
-          <div class="control">
-            <label>Estimated time of arrival</label>
-            <input type="time" />
-          </div>
+  <div class="control">
+    <label>Estimated time of arrival</label>
+    <input type="time" />
+  </div>
 
-          <div class="control">
-            <label>Your website</label>
-            <input placeholder="https://example.com" type="url" />
-          </div>
+  <div class="control">
+    <label>Your website</label>
+    <input placeholder="https://example.com" type="url" />
+  </div>
 
-          <div class="control">
-            <label>Your dessert preference:</label>
+  <div class="control">
+    <label>Your dessert preference:</label>
 
-            <select>
-              <option>Ice cream</option>
-              <option>Cake</option>
-              <option>Pie</option>
-              <option>Tiramisu</option>
-              <option>Cookies</option>
-            </select>
-          </div>
+    <select>
+      <option>Ice cream</option>
+      <option>Cake</option>
+      <option>Pie</option>
+      <option>Tiramisu</option>
+      <option>Cookies</option>
+    </select>
+  </div>
 
-          <div class="control">
-            <label>A long comment</label>
-            <textarea placeholder="Dear diary, ..."></textarea>
-          </div>
+  <div class="control">
+    <label>A long comment</label>
+    <textarea placeholder="Dear diary, ..."></textarea>
+  </div>
 
-          <div class="control">
-            <label>Disabled</label>
-            <input disabled placeholder="Disabled!" type="text" />
-          </div>
+  <div class="control">
+    <label>Disabled</label>
+    <input disabled placeholder="Disabled!" type="text" />
+  </div>
 
-          <div class="control">
-            <label>Dark</label>
-            <input class="dark" placeholder="Dark!" type="text" />
-          </div>
+  <div class="control">
+    <label>Dark</label>
+    <input class="dark" placeholder="Dark!" type="text" />
+  </div>
 
-          <div class="control">
-            <label>Danger</label>
-            <input class="danger" placeholder="Danger!" type="text" />
-          </div>
+  <div class="control">
+    <label>Danger</label>
+    <input class="danger" placeholder="Danger!" type="text" />
+  </div>
 
-          <div class="control">
-            <label>Warning</label>
-            <input class="warning" placeholder="Warning!" type="text" />
-          </div>
+  <div class="control">
+    <label>Warning</label>
+    <input class="warning" placeholder="Warning!" type="text" />
+  </div>
 
-          <div class="control">
-            <label>Success</label>
-            <input class="success" placeholder="Success!" type="text" />
-          </div>
+  <div class="control">
+    <label>Success</label>
+    <input class="success" placeholder="Success!" type="text" />
+  </div>
 
-          <div class="control">
-            <label>Primary</label>
-            <input class="primary" placeholder="Primary!" type="text" />
-          </div>
+  <div class="control">
+    <label>Primary</label>
+    <input class="primary" placeholder="Primary!" type="text" />
+  </div>
 
-          <div class="control">
-            <label>Info</label>
-            <input class="info" placeholder="Info!" type="text" />
-          </div>
+  <div class="control">
+    <label>Info</label>
+    <input class="info" placeholder="Info!" type="text" />
+  </div>
 
-          <div class="control">
-            <label>Link</label>
-            <input class="link" placeholder="Link!" type="text" />
-          </div>
-        </div>
-
-        <div>
-          <p>
-            <b>
-              <a href="https://saganipsum.com/?p=3">Sagan Ipsum</a>
-              :
-            </b>
-          </p>
-
-          <ul>
-            <li>
-              Laws of physics dispassionate extraterrestrial observer quasar
-              billions upon billions Cambrian explosion circumnavigated.
-            </li>
-            <ul>
-              <li>
-                Concept of the number one at the edge of forever are creatures
-                of the cosmos bits of moving fluff a very small stage in a vast
-                cosmic arena not a sunrise but a galaxyrise?
-              </li>
-
-              <ul>
-                <li>
-                  Inconspicuous motes of rock and gas made in the interiors of
-                  collapsing stars preserve and cherish that pale blue dot
-                  citizens of distant epochs permanence of the stars concept of
-                  the number one.
-                </li>
-              </ul>
-            </ul>
-
-            <li>
-              A billion trillion light years muse about hearts of the stars
-              Jean-François Champollion culture?
-            </li>
-
-            <ul>
-              <li>
-                With pretty stories for which there's little good evidence are
-                creatures of the cosmos rogue are creatures of the cosmos
-                globular star cluster invent the universe.
-              </li>
-              <li>
-                Something incredible is waiting to be known Cambrian explosion
-                descended from astronomers take root and flourish from which we
-                spring dream of the mind's eye.
-              </li>
-              <li>
-                Courage of our questions extraordinary claims require
-                extraordinary evidence the carbon in our apple pies a very small
-                stage in a vast cosmic arena concept of the number one the sky
-                calls to us?
-              </li>
-            </ul>
-
-            <li>
-              Kindling the energy hidden in matter vastness is bearable only
-              through love extraplanetary shores of the cosmic ocean trillion
-              inconspicuous motes of rock and gas.
-            </li>
-
-            <ul>
-              <li>
-                Vangelis concept of the number one permanence of the stars
-                astonishment bits of moving fluff a mote of dust suspended in a
-                sunbeam?
-              </li>
-              <ul>
-                <li>
-                  Concept of the number one something incredible is waiting to
-                  be known venture network of wormholes the only home we've ever
-                  known from which we spring and billions upon billions upon
-                  billions upon billions upon billions upon billions upon
-                  billions.
-                </li>
-                <li>
-                  Star stuff harvesting star light a billion trillion from which
-                  we spring Orion's sword astonishment circumnavigated. Vangelis
-                  concept of the number one the ash of stellar alchemy vanquish
-                  the impossible intelligent beings network of wormholes.
-                </li>
-                <li>
-                  Courage of our questions emerged into consciousness
-                  extraordinary claims require extraordinary evidence the sky
-                  calls to us finite but unbounded realm of the galaxies.
-                </li>
-              </ul>
-            </ul>
-          </ul>
-
-          <p>
-            <b>
-              <a href="https://obamaipsum.com/">Obama Ipsum</a>
-              :
-            </b>
-          </p>
-
-          <ol>
-            <li>
-              It's the wisdom Moses imparted to those who would succeed him. If
-              you don't, you'll be able to get the same kind of coverage that
-              members of Congress give themselves.
-            </li>
-
-            <ol>
-              <li>
-                We are taking concrete actions to change course. Now, that must
-                be our work here on Earth.
-              </li>
-              <ol>
-                <li>
-                  Around the world, we can turn dialogue into Interfaith
-                  service, so bridges between peoples lead to action - whether
-                  it is combating malaria in Africa, or providing relief after a
-                  natural disaster.
-                </li>
-              </ol>
-            </ol>
-
-            <li>
-              I stand here knowing that my story is part of the larger American
-              story, that I owe a debt to all of those who came before me, and
-              that, in no other country on earth, is my story even possible.
-              Given my background, my politics, and my professed values and
-              ideals, there will no doubt be those for whom my statements of
-              condemnation are not enough.
-            </li>
-
-            <ol>
-              <li>The hope of immigrants setting out for distant shores.</li>
-              <li>
-                Most working- and middle-class white Americans don't feel that
-                they have been particularly privileged by their race.
-              </li>
-
-              <ol>
-                <li>
-                  People are coming together around a simple truth - that we are
-                  all connected, that I am my brother's keeper; I am my sister's
-                  keeper.
-                </li>
-                <li>
-                  But what I will not do is suggest that the Senator takes his
-                  positions for political purposes.
-                </li>
-                <li>
-                  We also know that military power alone is not going to solve
-                  the problems in Afghanistan and Pakistan.
-                </li>
-              </ol>
-
-              <li>
-                Threatening Israel with destruction - or repeating vile
-                stereotypes about Jews - is deeply wrong, and only serves to
-                evoke in the minds of Israelis this most painful of memories
-                while preventing the peace that the people of this region
-                deserve.
-              </li>
-            </ol>
-          </ol>
-        </div>
+  <div class="control">
+    <label>Link</label>
+    <input class="link" placeholder="Link!" type="text" />
+  </div>
+</div>
 
         <div>
-          <div>
-            <progress class="light"></progress>
-          </div>
+  <p>
+    <b>
+      <a href="https://saganipsum.com/?p=3">Sagan Ipsum</a>
+      :
+    </b>
+  </p>
 
-          <div>
-            <progress></progress>
-          </div>
+  <ul>
+    <li>
+      Laws of physics dispassionate extraterrestrial observer quasar billions
+      upon billions Cambrian explosion circumnavigated.
+    </li>
+    <ul>
+      <li>
+        Concept of the number one at the edge of forever are creatures of the
+        cosmos bits of moving fluff a very small stage in a vast cosmic arena
+        not a sunrise but a galaxyrise?
+      </li>
 
-          <div>
-            <progress class="dark"></progress>
-          </div>
+      <ul>
+        <li>
+          Inconspicuous motes of rock and gas made in the interiors of
+          collapsing stars preserve and cherish that pale blue dot citizens of
+          distant epochs permanence of the stars concept of the number one.
+        </li>
+      </ul>
+    </ul>
 
-          <div>
-            <progress class="danger"></progress>
-          </div>
+    <li>
+      A billion trillion light years muse about hearts of the stars
+      Jean-François Champollion culture?
+    </li>
 
-          <div>
-            <progress class="warning"></progress>
-          </div>
+    <ul>
+      <li>
+        With pretty stories for which there's little good evidence are creatures
+        of the cosmos rogue are creatures of the cosmos globular star cluster
+        invent the universe.
+      </li>
+      <li>
+        Something incredible is waiting to be known Cambrian explosion descended
+        from astronomers take root and flourish from which we spring dream of
+        the mind's eye.
+      </li>
+      <li>
+        Courage of our questions extraordinary claims require extraordinary
+        evidence the carbon in our apple pies a very small stage in a vast
+        cosmic arena concept of the number one the sky calls to us?
+      </li>
+    </ul>
 
-          <div>
-            <progress class="success"></progress>
-          </div>
+    <li>
+      Kindling the energy hidden in matter vastness is bearable only through
+      love extraplanetary shores of the cosmic ocean trillion inconspicuous
+      motes of rock and gas.
+    </li>
 
-          <div>
-            <progress class="primary"></progress>
-          </div>
+    <ul>
+      <li>
+        Vangelis concept of the number one permanence of the stars astonishment
+        bits of moving fluff a mote of dust suspended in a sunbeam?
+      </li>
+      <ul>
+        <li>
+          Concept of the number one something incredible is waiting to be known
+          venture network of wormholes the only home we've ever known from which
+          we spring and billions upon billions upon billions upon billions upon
+          billions upon billions upon billions.
+        </li>
+        <li>
+          Star stuff harvesting star light a billion trillion from which we
+          spring Orion's sword astonishment circumnavigated. Vangelis concept of
+          the number one the ash of stellar alchemy vanquish the impossible
+          intelligent beings network of wormholes.
+        </li>
+        <li>
+          Courage of our questions emerged into consciousness extraordinary
+          claims require extraordinary evidence the sky calls to us finite but
+          unbounded realm of the galaxies.
+        </li>
+      </ul>
+    </ul>
+  </ul>
 
-          <div>
-            <progress class="info"></progress>
-          </div>
+  <p>
+    <b>
+      <a href="https://obamaipsum.com/">Obama Ipsum</a>
+      :
+    </b>
+  </p>
 
-          <div>
-            <progress class="link"></progress>
-          </div>
+  <ol>
+    <li>
+      It's the wisdom Moses imparted to those who would succeed him. If you
+      don't, you'll be able to get the same kind of coverage that members of
+      Congress give themselves.
+    </li>
 
-          <script>
-            const progresses = Array.from(document.querySelectorAll("progress"))
-            const diff = (2 * Math.PI) / progresses.length
-            let frame = 0
+    <ol>
+      <li>
+        We are taking concrete actions to change course. Now, that must be our
+        work here on Earth.
+      </li>
+      <ol>
+        <li>
+          Around the world, we can turn dialogue into Interfaith service, so
+          bridges between peoples lead to action - whether it is combating
+          malaria in Africa, or providing relief after a natural disaster.
+        </li>
+      </ol>
+    </ol>
 
-            const loop = () => {
-              progresses.forEach((p, i) => {
-                p.value = Math.sin(frame / 30 + i * diff) * 0.25 + 0.5
-                p.innerHTML = p.value * 100 + "%"
-              })
+    <li>
+      I stand here knowing that my story is part of the larger American story,
+      that I owe a debt to all of those who came before me, and that, in no
+      other country on earth, is my story even possible. Given my background, my
+      politics, and my professed values and ideals, there will no doubt be those
+      for whom my statements of condemnation are not enough.
+    </li>
 
-              frame++
-              window.requestAnimationFrame(loop)
-            }
+    <ol>
+      <li>The hope of immigrants setting out for distant shores.</li>
+      <li>
+        Most working- and middle-class white Americans don't feel that they have
+        been particularly privileged by their race.
+      </li>
 
-            loop()
-          </script>
-        </div>
+      <ol>
+        <li>
+          People are coming together around a simple truth - that we are all
+          connected, that I am my brother's keeper; I am my sister's keeper.
+        </li>
+        <li>
+          But what I will not do is suggest that the Senator takes his positions
+          for political purposes.
+        </li>
+        <li>
+          We also know that military power alone is not going to solve the
+          problems in Afghanistan and Pakistan.
+        </li>
+      </ol>
+
+      <li>
+        Threatening Israel with destruction - or repeating vile stereotypes
+        about Jews - is deeply wrong, and only serves to evoke in the minds of
+        Israelis this most painful of memories while preventing the peace that
+        the people of this region deserve.
+      </li>
+    </ol>
+  </ol>
+</div>
 
         <div>
-          <details>
-            <summary>Click here for more details.</summary>
+  <div>
+    <progress class="light"></progress>
+  </div>
 
-            <p>
-              Sweet roll chupa chups gingerbread chocolate bar jelly sugar plum
-              cupcake chupa chups. Chocolate caramels gummies powder chocolate
-              lollipop. Bonbon shortbread cotton candy chupa chups cake toffee
-              marzipan jelly lemon drops. Sugar plum powder ice cream candy
-              canes cake biscuit pudding fruitcake wafer. Chupa chups
-              gingerbread lollipop tart sugar plum gummies chocolate cake
-              soufflé apple pie. Sweet cotton candy apple pie chocolate bar
-              brownie sweet roll candy canes donut candy. Danish sugar plum
-              pudding jelly-o marzipan. Liquorice tiramisu toffee jujubes apple
-              pie apple pie gummies liquorice. Gummi bears danish cake donut
-              chocolate bar tootsie roll. Pie liquorice pudding macaroon
-              biscuit. Donut sweet roll liquorice bear claw marshmallow halvah.
-              Halvah jelly chocolate bar gingerbread ice cream pie croissant
-              tootsie roll carrot cake.
-            </p>
-          </details>
+  <div>
+    <progress></progress>
+  </div>
 
-          <details class="dark">
-            <summary>Click here for more details.</summary>
+  <div>
+    <progress class="dark"></progress>
+  </div>
 
-            <p>
-              Sweet roll chupa chups gingerbread chocolate bar jelly sugar plum
-              cupcake chupa chups. Chocolate caramels gummies powder chocolate
-              lollipop. Bonbon shortbread cotton candy chupa chups cake toffee
-              marzipan jelly lemon drops. Sugar plum powder ice cream candy
-              canes cake biscuit pudding fruitcake wafer. Chupa chups
-              gingerbread lollipop tart sugar plum gummies chocolate cake
-              soufflé apple pie. Sweet cotton candy apple pie chocolate bar
-              brownie sweet roll candy canes donut candy. Danish sugar plum
-              pudding jelly-o marzipan. Liquorice tiramisu toffee jujubes apple
-              pie apple pie gummies liquorice. Gummi bears danish cake donut
-              chocolate bar tootsie roll. Pie liquorice pudding macaroon
-              biscuit. Donut sweet roll liquorice bear claw marshmallow halvah.
-              Halvah jelly chocolate bar gingerbread ice cream pie croissant
-              tootsie roll carrot cake.
-            </p>
-          </details>
+  <div>
+    <progress class="danger"></progress>
+  </div>
 
-          <details class="danger light">
-            <summary>Click here for more details.</summary>
+  <div>
+    <progress class="warning"></progress>
+  </div>
 
-            <p>
-              Sweet roll chupa chups gingerbread chocolate bar jelly sugar plum
-              cupcake chupa chups. Chocolate caramels gummies powder chocolate
-              lollipop. Bonbon shortbread cotton candy chupa chups cake toffee
-              marzipan jelly lemon drops. Sugar plum powder ice cream candy
-              canes cake biscuit pudding fruitcake wafer. Chupa chups
-              gingerbread lollipop tart sugar plum gummies chocolate cake
-              soufflé apple pie. Sweet cotton candy apple pie chocolate bar
-              brownie sweet roll candy canes donut candy. Danish sugar plum
-              pudding jelly-o marzipan. Liquorice tiramisu toffee jujubes apple
-              pie apple pie gummies liquorice. Gummi bears danish cake donut
-              chocolate bar tootsie roll. Pie liquorice pudding macaroon
-              biscuit. Donut sweet roll liquorice bear claw marshmallow halvah.
-              Halvah jelly chocolate bar gingerbread ice cream pie croissant
-              tootsie roll carrot cake.
-            </p>
-          </details>
+  <div>
+    <progress class="success"></progress>
+  </div>
 
-          <details class="light warning">
-            <summary>Click here for more details.</summary>
+  <div>
+    <progress class="primary"></progress>
+  </div>
 
-            <p>
-              Sweet roll chupa chups gingerbread chocolate bar jelly sugar plum
-              cupcake chupa chups. Chocolate caramels gummies powder chocolate
-              lollipop. Bonbon shortbread cotton candy chupa chups cake toffee
-              marzipan jelly lemon drops. Sugar plum powder ice cream candy
-              canes cake biscuit pudding fruitcake wafer. Chupa chups
-              gingerbread lollipop tart sugar plum gummies chocolate cake
-              soufflé apple pie. Sweet cotton candy apple pie chocolate bar
-              brownie sweet roll candy canes donut candy. Danish sugar plum
-              pudding jelly-o marzipan. Liquorice tiramisu toffee jujubes apple
-              pie apple pie gummies liquorice. Gummi bears danish cake donut
-              chocolate bar tootsie roll. Pie liquorice pudding macaroon
-              biscuit. Donut sweet roll liquorice bear claw marshmallow halvah.
-              Halvah jelly chocolate bar gingerbread ice cream pie croissant
-              tootsie roll carrot cake.
-            </p>
-          </details>
+  <div>
+    <progress class="info"></progress>
+  </div>
 
-          <details class="light success">
-            <summary>Click here for more details.</summary>
+  <div>
+    <progress class="link"></progress>
+  </div>
 
-            <p>
-              Sweet roll chupa chups gingerbread chocolate bar jelly sugar plum
-              cupcake chupa chups. Chocolate caramels gummies powder chocolate
-              lollipop. Bonbon shortbread cotton candy chupa chups cake toffee
-              marzipan jelly lemon drops. Sugar plum powder ice cream candy
-              canes cake biscuit pudding fruitcake wafer. Chupa chups
-              gingerbread lollipop tart sugar plum gummies chocolate cake
-              soufflé apple pie. Sweet cotton candy apple pie chocolate bar
-              brownie sweet roll candy canes donut candy. Danish sugar plum
-              pudding jelly-o marzipan. Liquorice tiramisu toffee jujubes apple
-              pie apple pie gummies liquorice. Gummi bears danish cake donut
-              chocolate bar tootsie roll. Pie liquorice pudding macaroon
-              biscuit. Donut sweet roll liquorice bear claw marshmallow halvah.
-              Halvah jelly chocolate bar gingerbread ice cream pie croissant
-              tootsie roll carrot cake.
-            </p>
-          </details>
+  <script>
+    const progresses = Array.from(document.querySelectorAll("progress"))
+    const diff = (2 * Math.PI) / progresses.length
+    let frame = 0
 
-          <details class="light primary">
-            <summary>Click here for more details.</summary>
+    const loop = () => {
+      progresses.forEach((p, i) => {
+        p.value = Math.sin(frame / 30 + i * diff) * 0.25 + 0.5
+        p.innerHTML = p.value * 100 + "%"
+      })
 
-            <p>
-              Sweet roll chupa chups gingerbread chocolate bar jelly sugar plum
-              cupcake chupa chups. Chocolate caramels gummies powder chocolate
-              lollipop. Bonbon shortbread cotton candy chupa chups cake toffee
-              marzipan jelly lemon drops. Sugar plum powder ice cream candy
-              canes cake biscuit pudding fruitcake wafer. Chupa chups
-              gingerbread lollipop tart sugar plum gummies chocolate cake
-              soufflé apple pie. Sweet cotton candy apple pie chocolate bar
-              brownie sweet roll candy canes donut candy. Danish sugar plum
-              pudding jelly-o marzipan. Liquorice tiramisu toffee jujubes apple
-              pie apple pie gummies liquorice. Gummi bears danish cake donut
-              chocolate bar tootsie roll. Pie liquorice pudding macaroon
-              biscuit. Donut sweet roll liquorice bear claw marshmallow halvah.
-              Halvah jelly chocolate bar gingerbread ice cream pie croissant
-              tootsie roll carrot cake.
-            </p>
-          </details>
+      frame++
+      window.requestAnimationFrame(loop)
+    }
 
-          <details class="info light">
-            <summary>Click here for more details.</summary>
+    loop()
+  </script>
+</div>
 
-            <p>
-              Sweet roll chupa chups gingerbread chocolate bar jelly sugar plum
-              cupcake chupa chups. Chocolate caramels gummies powder chocolate
-              lollipop. Bonbon shortbread cotton candy chupa chups cake toffee
-              marzipan jelly lemon drops. Sugar plum powder ice cream candy
-              canes cake biscuit pudding fruitcake wafer. Chupa chups
-              gingerbread lollipop tart sugar plum gummies chocolate cake
-              soufflé apple pie. Sweet cotton candy apple pie chocolate bar
-              brownie sweet roll candy canes donut candy. Danish sugar plum
-              pudding jelly-o marzipan. Liquorice tiramisu toffee jujubes apple
-              pie apple pie gummies liquorice. Gummi bears danish cake donut
-              chocolate bar tootsie roll. Pie liquorice pudding macaroon
-              biscuit. Donut sweet roll liquorice bear claw marshmallow halvah.
-              Halvah jelly chocolate bar gingerbread ice cream pie croissant
-              tootsie roll carrot cake.
-            </p>
-          </details>
+        <div>
+  <details>
+    <summary>Click here for more details.</summary>
 
-          <details class="light link">
-            <summary>Click here for more details.</summary>
+    <p>
+      Sweet roll chupa chups gingerbread chocolate bar jelly sugar plum cupcake
+      chupa chups. Chocolate caramels gummies powder chocolate lollipop. Bonbon
+      shortbread cotton candy chupa chups cake toffee marzipan jelly lemon
+      drops. Sugar plum powder ice cream candy canes cake biscuit pudding
+      fruitcake wafer. Chupa chups gingerbread lollipop tart sugar plum gummies
+      chocolate cake soufflé apple pie. Sweet cotton candy apple pie chocolate
+      bar brownie sweet roll candy canes donut candy. Danish sugar plum pudding
+      jelly-o marzipan. Liquorice tiramisu toffee jujubes apple pie apple pie
+      gummies liquorice. Gummi bears danish cake donut chocolate bar tootsie
+      roll. Pie liquorice pudding macaroon biscuit. Donut sweet roll liquorice
+      bear claw marshmallow halvah. Halvah jelly chocolate bar gingerbread ice
+      cream pie croissant tootsie roll carrot cake.
+    </p>
 
-            <p>
-              Sweet roll chupa chups gingerbread chocolate bar jelly sugar plum
-              cupcake chupa chups. Chocolate caramels gummies powder chocolate
-              lollipop. Bonbon shortbread cotton candy chupa chups cake toffee
-              marzipan jelly lemon drops. Sugar plum powder ice cream candy
-              canes cake biscuit pudding fruitcake wafer. Chupa chups
-              gingerbread lollipop tart sugar plum gummies chocolate cake
-              soufflé apple pie. Sweet cotton candy apple pie chocolate bar
-              brownie sweet roll candy canes donut candy. Danish sugar plum
-              pudding jelly-o marzipan. Liquorice tiramisu toffee jujubes apple
-              pie apple pie gummies liquorice. Gummi bears danish cake donut
-              chocolate bar tootsie roll. Pie liquorice pudding macaroon
-              biscuit. Donut sweet roll liquorice bear claw marshmallow halvah.
-              Halvah jelly chocolate bar gingerbread ice cream pie croissant
-              tootsie roll carrot cake.
-            </p>
-          </details>
-        </div>
+    <p><a href="https://cupcakeipsum.com">cupcakeipsum.com</a></p>
+  </details>
+
+  <details class="dark">
+    <summary>Click here for more details.</summary>
+
+    <p>
+      Sweet roll chupa chups gingerbread chocolate bar jelly sugar plum cupcake
+      chupa chups. Chocolate caramels gummies powder chocolate lollipop. Bonbon
+      shortbread cotton candy chupa chups cake toffee marzipan jelly lemon
+      drops. Sugar plum powder ice cream candy canes cake biscuit pudding
+      fruitcake wafer. Chupa chups gingerbread lollipop tart sugar plum gummies
+      chocolate cake soufflé apple pie. Sweet cotton candy apple pie chocolate
+      bar brownie sweet roll candy canes donut candy. Danish sugar plum pudding
+      jelly-o marzipan. Liquorice tiramisu toffee jujubes apple pie apple pie
+      gummies liquorice. Gummi bears danish cake donut chocolate bar tootsie
+      roll. Pie liquorice pudding macaroon biscuit. Donut sweet roll liquorice
+      bear claw marshmallow halvah. Halvah jelly chocolate bar gingerbread ice
+      cream pie croissant tootsie roll carrot cake.
+    </p>
+
+    <p><a href="https://cupcakeipsum.com">cupcakeipsum.com</a></p>
+  </details>
+
+  <details class="danger light">
+    <summary>Click here for more details.</summary>
+
+    <p>
+      Sweet roll chupa chups gingerbread chocolate bar jelly sugar plum cupcake
+      chupa chups. Chocolate caramels gummies powder chocolate lollipop. Bonbon
+      shortbread cotton candy chupa chups cake toffee marzipan jelly lemon
+      drops. Sugar plum powder ice cream candy canes cake biscuit pudding
+      fruitcake wafer. Chupa chups gingerbread lollipop tart sugar plum gummies
+      chocolate cake soufflé apple pie. Sweet cotton candy apple pie chocolate
+      bar brownie sweet roll candy canes donut candy. Danish sugar plum pudding
+      jelly-o marzipan. Liquorice tiramisu toffee jujubes apple pie apple pie
+      gummies liquorice. Gummi bears danish cake donut chocolate bar tootsie
+      roll. Pie liquorice pudding macaroon biscuit. Donut sweet roll liquorice
+      bear claw marshmallow halvah. Halvah jelly chocolate bar gingerbread ice
+      cream pie croissant tootsie roll carrot cake.
+    </p>
+
+    <p><a href="https://cupcakeipsum.com">cupcakeipsum.com</a></p>
+  </details>
+
+  <details class="light warning">
+    <summary>Click here for more details.</summary>
+
+    <p>
+      Sweet roll chupa chups gingerbread chocolate bar jelly sugar plum cupcake
+      chupa chups. Chocolate caramels gummies powder chocolate lollipop. Bonbon
+      shortbread cotton candy chupa chups cake toffee marzipan jelly lemon
+      drops. Sugar plum powder ice cream candy canes cake biscuit pudding
+      fruitcake wafer. Chupa chups gingerbread lollipop tart sugar plum gummies
+      chocolate cake soufflé apple pie. Sweet cotton candy apple pie chocolate
+      bar brownie sweet roll candy canes donut candy. Danish sugar plum pudding
+      jelly-o marzipan. Liquorice tiramisu toffee jujubes apple pie apple pie
+      gummies liquorice. Gummi bears danish cake donut chocolate bar tootsie
+      roll. Pie liquorice pudding macaroon biscuit. Donut sweet roll liquorice
+      bear claw marshmallow halvah. Halvah jelly chocolate bar gingerbread ice
+      cream pie croissant tootsie roll carrot cake.
+    </p>
+
+    <p><a href="https://cupcakeipsum.com">cupcakeipsum.com</a></p>
+  </details>
+
+  <details class="light success">
+    <summary>Click here for more details.</summary>
+
+    <p>
+      Sweet roll chupa chups gingerbread chocolate bar jelly sugar plum cupcake
+      chupa chups. Chocolate caramels gummies powder chocolate lollipop. Bonbon
+      shortbread cotton candy chupa chups cake toffee marzipan jelly lemon
+      drops. Sugar plum powder ice cream candy canes cake biscuit pudding
+      fruitcake wafer. Chupa chups gingerbread lollipop tart sugar plum gummies
+      chocolate cake soufflé apple pie. Sweet cotton candy apple pie chocolate
+      bar brownie sweet roll candy canes donut candy. Danish sugar plum pudding
+      jelly-o marzipan. Liquorice tiramisu toffee jujubes apple pie apple pie
+      gummies liquorice. Gummi bears danish cake donut chocolate bar tootsie
+      roll. Pie liquorice pudding macaroon biscuit. Donut sweet roll liquorice
+      bear claw marshmallow halvah. Halvah jelly chocolate bar gingerbread ice
+      cream pie croissant tootsie roll carrot cake.
+    </p>
+
+    <p><a href="https://cupcakeipsum.com">cupcakeipsum.com</a></p>
+  </details>
+
+  <details class="light primary">
+    <summary>Click here for more details.</summary>
+
+    <p>
+      Sweet roll chupa chups gingerbread chocolate bar jelly sugar plum cupcake
+      chupa chups. Chocolate caramels gummies powder chocolate lollipop. Bonbon
+      shortbread cotton candy chupa chups cake toffee marzipan jelly lemon
+      drops. Sugar plum powder ice cream candy canes cake biscuit pudding
+      fruitcake wafer. Chupa chups gingerbread lollipop tart sugar plum gummies
+      chocolate cake soufflé apple pie. Sweet cotton candy apple pie chocolate
+      bar brownie sweet roll candy canes donut candy. Danish sugar plum pudding
+      jelly-o marzipan. Liquorice tiramisu toffee jujubes apple pie apple pie
+      gummies liquorice. Gummi bears danish cake donut chocolate bar tootsie
+      roll. Pie liquorice pudding macaroon biscuit. Donut sweet roll liquorice
+      bear claw marshmallow halvah. Halvah jelly chocolate bar gingerbread ice
+      cream pie croissant tootsie roll carrot cake.
+    </p>
+
+    <p><a href="https://cupcakeipsum.com">cupcakeipsum.com</a></p>
+  </details>
+
+  <details class="info light">
+    <summary>Click here for more details.</summary>
+
+    <p>
+      Sweet roll chupa chups gingerbread chocolate bar jelly sugar plum cupcake
+      chupa chups. Chocolate caramels gummies powder chocolate lollipop. Bonbon
+      shortbread cotton candy chupa chups cake toffee marzipan jelly lemon
+      drops. Sugar plum powder ice cream candy canes cake biscuit pudding
+      fruitcake wafer. Chupa chups gingerbread lollipop tart sugar plum gummies
+      chocolate cake soufflé apple pie. Sweet cotton candy apple pie chocolate
+      bar brownie sweet roll candy canes donut candy. Danish sugar plum pudding
+      jelly-o marzipan. Liquorice tiramisu toffee jujubes apple pie apple pie
+      gummies liquorice. Gummi bears danish cake donut chocolate bar tootsie
+      roll. Pie liquorice pudding macaroon biscuit. Donut sweet roll liquorice
+      bear claw marshmallow halvah. Halvah jelly chocolate bar gingerbread ice
+      cream pie croissant tootsie roll carrot cake.
+    </p>
+
+    <p><a href="https://cupcakeipsum.com">cupcakeipsum.com</a></p>
+  </details>
+
+  <details class="light link">
+    <summary>Click here for more details.</summary>
+
+    <p>
+      Sweet roll chupa chups gingerbread chocolate bar jelly sugar plum cupcake
+      chupa chups. Chocolate caramels gummies powder chocolate lollipop. Bonbon
+      shortbread cotton candy chupa chups cake toffee marzipan jelly lemon
+      drops. Sugar plum powder ice cream candy canes cake biscuit pudding
+      fruitcake wafer. Chupa chups gingerbread lollipop tart sugar plum gummies
+      chocolate cake soufflé apple pie. Sweet cotton candy apple pie chocolate
+      bar brownie sweet roll candy canes donut candy. Danish sugar plum pudding
+      jelly-o marzipan. Liquorice tiramisu toffee jujubes apple pie apple pie
+      gummies liquorice. Gummi bears danish cake donut chocolate bar tootsie
+      roll. Pie liquorice pudding macaroon biscuit. Donut sweet roll liquorice
+      bear claw marshmallow halvah. Halvah jelly chocolate bar gingerbread ice
+      cream pie croissant tootsie roll carrot cake.
+    </p>
+
+    <p><a href="https://cupcakeipsum.com">cupcakeipsum.com</a></p>
+  </details>
+</div>
+
       </div>
     </section>
 
     <footer>
-      <div class="container row row-comfy row-top">
-        <div>
-          <div>
-            <a href="">Home</a>
-          </div>
-
-          <div>
-            <a href="">About</a>
-          </div>
-
-          <div>
-            <a href="">Documentation</a>
-          </div>
-
-          <div>
-            <a href="">FAQ</a>
-          </div>
-
-          <div>
-            <a href="">Contact</a>
-          </div>
-        </div>
-
-        <div>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-            condimentum faucibus tellus, non consectetur felis pharetra ac.
-            Aliquam dapibus dignissim rhoncus. Cras interdum ante vitae libero
-            gravida, eget posuere metus tempus. Maecenas in fermentum eros, a
-            commodo massa. Aliquam eu gravida urna. Sed porttitor pulvinar sem,
-            a sodales risus semper eu.
-          </div>
-
-          <br />
-
-          <div>Copyright Nobody 2025.</div>
-        </div>
+  <div class="container row row-comfy row-top">
+    <div>
+      <div>
+        <a href="">Home</a>
       </div>
-    </footer>
+
+      <div>
+        <a href="">About</a>
+      </div>
+
+      <div>
+        <a href="">Documentation</a>
+      </div>
+
+      <div>
+        <a href="">FAQ</a>
+      </div>
+
+      <div>
+        <a href="">Contact</a>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+        condimentum faucibus tellus, non consectetur felis pharetra ac. Aliquam
+        dapibus dignissim rhoncus. Cras interdum ante vitae libero gravida, eget
+        posuere metus tempus. Maecenas in fermentum eros, a commodo massa.
+        Aliquam eu gravida urna. Sed porttitor pulvinar sem, a sodales risus
+        semper eu.
+      </div>
+
+      <br />
+
+      <div>Copyright Nobody 2025.</div>
+    </div>
+  </div>
+</footer>
+
   </body>
 </html>

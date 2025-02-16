@@ -1,0 +1,58 @@
+<nav class="light">
+  <div class="nav-left">
+    <a href=""><b>base.css</b></a>
+  </div>
+
+  <div class="nav-right">
+    <button class="nav-burger"></button>
+
+    <menu>
+      <li>
+        <a href="">Home</a>
+      </li>
+
+      <li>
+        <a href="">About</a>
+      </li>
+
+      <li>
+        <a href="">Documentation</a>
+      </li>
+
+      <li>
+        <a href="">FAQ</a>
+      </li>
+
+      <li>
+        <a href="">Contact</a>
+      </li>
+    </menu>
+  </div>
+
+  <script>
+    const nav = document.querySelector("nav")
+    const burger = nav.querySelector(".nav-burger")
+    const menu = nav.querySelector("menu")
+    let navMenuIsVisible = false
+
+    const toggle = () => {
+      navMenuIsVisible = !navMenuIsVisible
+
+      if (navMenuIsVisible) {
+        burger.classList.add("is-active")
+        menu.classList.add("is-active")
+      } else {
+        burger.classList.remove("is-active")
+        menu.classList.remove("is-active")
+      }
+    }
+
+    burger.addEventListener("click", toggle)
+
+    window.addEventListener("keydown", event => {
+      if (event.key === "Escape" && navMenuIsVisible) {
+        toggle()
+      }
+    })
+  </script>
+</nav>
