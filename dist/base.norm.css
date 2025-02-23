@@ -1490,66 +1490,6 @@ progress.warning {
   --progress-value-background-color: var(--color-yellow-5);
 }
 
-/* progress {
-  --progress-value-background-color: var(--color-gray-6);
-}
-
-progress {
-  appearance: none;
-  display: block;
-  padding: 0;
-  border: 0;
-  border-radius: calc(var(--spacing-sm) / 2);
-  overflow: hidden;
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
-  height: var(--spacing-sm);
-  background-color: var(--color-gray-1);
-}
-
-progress.danger {
-  --progress-value-background-color: var(--color-red-5);
-}
-
-progress.dark {
-  --progress-value-background-color: var(--color-gray-9);
-}
-
-progress.info {
-  --progress-value-background-color: var(--color-blue-5);
-}
-
-progress.light {
-  --progress-value-background-color: var(--color-gray-4);
-}
-
-progress.link {
-  --progress-value-background-color: var(--color-indigo-5);
-}
-
-progress.primary {
-  --progress-value-background-color: var(--color-teal-5);
-}
-
-progress.success {
-  --progress-value-background-color: var(--color-lime-5);
-}
-
-progress.warning {
-  --progress-value-background-color: var(--color-yellow-5);
-}
-
-progress::-webkit-progress-bar {
-  background-color: var(--color-gray-1);
-}
-
-progress::-webkit-progress-value,
-progress::-moz-progress-bar,
-progress::-ms-fill {
-  background-color: var(--progress-value-background-color);
-} */
-
 .row {
   display: flex;
   flex-direction: row;
@@ -1647,6 +1587,63 @@ select.success {
 select.warning {
   background-color: var(--color-yellow-0);
   border: var(--line-thickness) solid var(--color-yellow-6);
+}
+
+.table-container {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+table,
+thead,
+tbody,
+tr,
+td,
+th {
+  border-collapse: collapse;
+}
+
+table.striped tbody tr:nth-child(odd) {
+  background-color: var(--color-gray-1);
+}
+
+table thead {
+  border-bottom: var(--line-thickness) solid var(--color-gray-1) !important;
+  font-weight: bold;
+}
+
+table.striped thead {
+  border-bottom: unset;
+}
+
+table thead tr {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+table thead tr th {
+  padding: var(--spacing-xs);
+  text-align: left;
+}
+
+table tbody tr:hover,
+table.striped tbody tr:hover {
+  background-color: var(--color-blue-0);
+}
+
+table tbody tr td {
+  padding: var(--spacing-xs);
+  text-align: left;
 }
 
 textarea {
