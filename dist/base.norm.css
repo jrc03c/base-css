@@ -1606,23 +1606,20 @@ table {
 table,
 thead,
 tbody,
+tfoot,
 tr,
 td,
 th {
   border-collapse: collapse;
 }
 
-table.striped tbody tr:nth-child(odd) {
+table.striped tbody tr:nth-child(even) {
   background-color: var(--color-gray-1);
 }
 
 table thead {
-  border-bottom: var(--line-thickness) solid var(--color-gray-1) !important;
+  border-bottom: var(--line-thickness) solid var(--color-gray-9) !important;
   font-weight: bold;
-}
-
-table.striped thead {
-  border-bottom: unset;
 }
 
 table thead tr {
@@ -1644,6 +1641,62 @@ table.striped tbody tr:hover {
 table tbody tr td {
   padding: var(--spacing-xs);
   text-align: left;
+}
+
+table tfoot {
+  border-top: var(--line-thickness) solid var(--color-gray-9) !important;
+  font-weight: bold;
+}
+
+table tfoot.dark {
+  border-top: unset !important;
+  background-color: var(--color-gray-9);
+}
+
+table tfoot.gray {
+  background-color: var(--color-gray-3);
+}
+
+table tfoot.light {
+  border-top: var(--line-thickness) solid var(--color-gray-3) !important;
+}
+
+table tfoot tr {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+table tfoot.dark tr td,
+table tfoot.dark tr th {
+  color: var(--color-gray-0);
+}
+
+table tfoot.light tr td,
+table tfoot.light tr th {
+  color: var(--color-gray-5);
+}
+
+table tfoot tr td,
+table tfoot tr th {
+  padding: var(--spacing-xs);
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
 }
 
 textarea {
