@@ -4,7 +4,10 @@
   </div>
 
   <div class="nav-right">
-    <button class="nav-burger"></button>
+    <div class="nav-burger">
+      <input id="nav-burger-checkbox" type="checkbox" />
+      <label for="nav-burger-checkbox"></label>
+    </div>
 
     <menu>
       <li>
@@ -28,31 +31,22 @@
       </li>
     </menu>
   </div>
-
-  <script>
-    const nav = document.querySelector("nav")
-    const burger = nav.querySelector(".nav-burger")
-    const menu = nav.querySelector("menu")
-    let navMenuIsVisible = false
-
-    const toggle = () => {
-      navMenuIsVisible = !navMenuIsVisible
-
-      if (navMenuIsVisible) {
-        burger.classList.add("is-active")
-        menu.classList.add("is-active")
-      } else {
-        burger.classList.remove("is-active")
-        menu.classList.remove("is-active")
-      }
-    }
-
-    burger.addEventListener("click", toggle)
-
-    window.addEventListener("keydown", event => {
-      if (event.key === "Escape" && navMenuIsVisible) {
-        toggle()
-      }
-    })
-  </script>
 </nav>
+
+<script>
+  // The nav menu itself uses pure CSS. This JS is only here to add the
+  // convenience of closing the nav menu via the "Escape" key. In other words,
+  // the menu can function perfectly well without this bit of JS!
+  const nav = document.querySelector("nav")
+  const checkbox = nav.querySelector("input[type='checkbox']")
+  const label = nav.querySelector(".nav-burger").querySelector("label")
+
+  window.addEventListener("keydown", event => {
+    if (
+      event.key === "Escape" &&
+      (checkbox.checked || checkbox.getAttribute("checked"))
+    ) {
+      label.click()
+    }
+  })
+</script>
