@@ -50,7 +50,7 @@ function rebuild() {
     })
 
     fs.writeFileSync("index.html", out, "utf8")
-
+    execSync(`npx prettier -w index.html`, { encoding: "utf8" })
     console.log("\nDone! 🎉\n")
   } catch (e) {
     console.error(e)
