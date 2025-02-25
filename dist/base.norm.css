@@ -1264,6 +1264,35 @@ button.dark {
   box-shadow: 0 var(--spacing-xs) 0 var(--color-gray-9);
 }
 
+button.close,
+button.delete {
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 100%;
+  width: 2em;
+  min-width: 2em;
+  max-width: 2em;
+  height: 2em;
+  min-height: 2em;
+  max-height: 2em;
+  box-shadow: none;
+  transform: none;
+}
+
+button.close::before,
+button.delete::before {
+  content: "✕";
+  transform: translateY(-0.075em);
+}
+
 button.info {
   background-color: var(--color-blue-4);
   color: white;
@@ -1299,6 +1328,11 @@ button:active {
   filter: brightness(var(--brightness-active));
   box-shadow: none;
   transform: translateY(var(--spacing-xs));
+}
+
+button.close:active,
+button.delete:active {
+  transform: none;
 }
 
 code {
@@ -2223,6 +2257,96 @@ table tfoot tr td,
 table tfoot tr th {
   padding: var(--spacing-xs);
   text-align: left;
+}
+
+.tag {
+  margin: 0;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: calc(1.5em / 0.75);
+  box-sizing: border-box;
+  font-size: 0.75em;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background-color: var(--color-gray-2);
+}
+
+.tag:has(> button.close),
+.tag:has(> button.delete) {
+  padding: var(--line-thickness) var(--spacing-sm) var(--line-thickness) var(--line-thickness);
+}
+
+.tag.danger {
+  background-color: var(--color-red-4);
+}
+
+.tag.danger:has(> button.close) button.close,
+.tag.danger:has(> button.delete) button.delete {
+  background-color: var(--color-red-6);
+}
+
+.tag.dark {
+  background-color: var(--color-gray-7);
+  color: white;
+}
+
+.tag.dark:has(> button.close) button.close,
+.tag.dark:has(> button.delete) button.delete {
+  background-color: var(--color-gray-9);
+  color: white;
+}
+
+.tag.info {
+  background-color: var(--color-blue-4);
+  color: white;
+}
+
+.tag.info:has(> button.close) button.close,
+.tag.info:has(> button.delete) button.delete {
+  background-color: var(--color-blue-6);
+  color: white;
+}
+
+.tag.link {
+  background-color: var(--color-indigo-4);
+  color: white;
+}
+
+.tag.link:has(> button.close) button.close,
+.tag.link:has(> button.delete) button.delete {
+  background-color: var(--color-indigo-6);
+  color: white;
+}
+
+.tag.primary {
+  background-color: var(--color-teal-4);
+}
+
+.tag.primary:has(> button.close) button.close,
+.tag.primary:has(> button.delete) button.delete {
+  background-color: var(--color-teal-6);
+}
+
+.tag.success {
+  background-color: var(--color-lime-4);
+}
+
+.tag.success:has(> button.close) button.close,
+.tag.success:has(> button.delete) button.delete {
+  background-color: var(--color-lime-6);
+}
+
+.tag.warning {
+  background-color: var(--color-yellow-4);
+}
+
+.tag.warning:has(> button.close) button.close,
+.tag.warning:has(> button.delete) button.delete {
+  background-color: var(--color-yellow-6);
 }
 
 .text-blue-0 {
