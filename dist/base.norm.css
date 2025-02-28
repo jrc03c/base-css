@@ -1444,6 +1444,50 @@ code {
   box-sizing: border-box;
 }
 
+.cols .col.col-1 {
+  width: calc(1 * calc(100% / 12));
+}
+
+.cols .col.col-2 {
+  width: calc(2 * calc(100% / 12));
+}
+
+.cols .col.col-3 {
+  width: calc(3 * calc(100% / 12));
+}
+
+.cols .col.col-4 {
+  width: calc(4 * calc(100% / 12));
+}
+
+.cols .col.col-5 {
+  width: calc(5 * calc(100% / 12));
+}
+
+.cols .col.col-6 {
+  width: calc(6 * calc(100% / 12));
+}
+
+.cols .col.col-7 {
+  width: calc(7 * calc(100% / 12));
+}
+
+.cols .col.col-8 {
+  width: calc(8 * calc(100% / 12));
+}
+
+.cols .col.col-9 {
+  width: calc(9 * calc(100% / 12));
+}
+
+.cols .col.col-10 {
+  width: calc(10 * calc(100% / 12));
+}
+
+.cols .col.col-11 {
+  width: calc(11 * calc(100% / 12));
+}
+
 .container {
   width: calc(960px - calc(var(--spacing) * 4));
   min-width: calc(960px - calc(var(--spacing) * 4));
