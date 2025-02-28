@@ -1961,6 +1961,7 @@ table thead tr {
 table thead tr th {
   padding: var(--spacing-xs);
   text-align: left;
+  font-size: var(--font-size-6);
 }
 
 table.hover tbody tr:hover,
@@ -1971,6 +1972,7 @@ table.hover.striped tbody tr:hover {
 table tbody tr td {
   padding: var(--spacing-xs);
   text-align: left;
+  font-size: var(--font-size-6);
 }
 
 table tfoot {
@@ -2011,6 +2013,7 @@ table tfoot tr td,
 table tfoot tr th {
   padding: var(--spacing-xs);
   text-align: left;
+  font-size: var(--font-size-6);
 }
 
 .tag {
