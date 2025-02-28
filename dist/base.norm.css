@@ -1806,7 +1806,7 @@ img {
   max-width: 100%;
 }
 
-input:not(type="submit") {
+input:not([type="submit"]) {
   padding: var(--spacing-sm);
   border: var(--line-thickness) solid var(--color-gray-3);
   border-radius: var(--border-radius);
@@ -1815,7 +1815,7 @@ input:not(type="submit") {
   background-color: var(--color-gray-0);
 }
 
-input:not(type="submit"):focus {
+input:not([type="submit"]):focus {
   border: var(--line-thickness) solid var(--color-gray-6);
 }
 
@@ -1849,38 +1849,38 @@ input[disabled] {
   cursor: not-allowed;
 }
 
-input:not(type="submit").danger {
+input:not([type="submit"]).danger {
   background-color: var(--color-red-0);
   border: var(--line-thickness) solid var(--color-red-6);
 }
 
-input:not(type="submit").dark {
+input:not([type="submit"]).dark {
   background-color: var(--color-gray-8);
   color: var(--color-gray-0);
   border: var(--line-thickness) solid var(--color-gray-9);
 }
 
-input:not(type="submit").info {
+input:not([type="submit"]).info {
   background-color: var(--color-blue-0);
   border: var(--line-thickness) solid var(--color-blue-6);
 }
 
-input:not(type="submit").link {
+input:not([type="submit"]).link {
   background-color: var(--color-indigo-0);
   border: var(--line-thickness) solid var(--color-indigo-6);
 }
 
-input:not(type="submit").primary {
+input:not([type="submit"]).primary {
   background-color: var(--color-teal-0);
   border: var(--line-thickness) solid var(--color-teal-6);
 }
 
-input:not(type="submit").success {
+input:not([type="submit"]).success {
   background-color: var(--color-lime-0);
   border: var(--line-thickness) solid var(--color-lime-6);
 }
 
-input:not(type="submit").warning {
+input:not([type="submit"]).warning {
   background-color: var(--color-yellow-0);
   border: var(--line-thickness) solid var(--color-yellow-6);
 }
@@ -2345,7 +2345,8 @@ table tfoot tr th {
 
 .tag:has(> button.close),
 .tag:has(> button.delete) {
-  padding: var(--line-thickness) var(--spacing-sm) var(--line-thickness) var(--line-thickness);
+  padding: var(--line-thickness) var(--spacing-sm) var(--line-thickness)
+    var(--line-thickness);
 }
 
 .tag.danger {
