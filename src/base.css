@@ -1082,6 +1082,7 @@ code {
   max-width: 100%;
   flex-grow: 999999999;
   flex-shrink: 999999999;
+  box-sizing: border-box;
 }
 
 .container {
@@ -2714,6 +2715,18 @@ ul ul {
 }
 
 @media (max-width: 768px) {
+  .cols {
+    flex-wrap: wrap;
+  }
+
+  .cols .col {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+
   nav {
     position: fixed;
     box-shadow: var(--shadow);
