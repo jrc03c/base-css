@@ -1074,6 +1074,14 @@ code {
   gap: var(--spacing);
 }
 
+.cols-tight {
+  gap: var(--spacing) var(--spacing-sm);
+}
+
+.cols-very-tight {
+  gap: var(--spacing) var(--spacing-xs);
+}
+
 .cols .col {
   margin: 0;
   padding: 0;

@@ -1438,6 +1438,7 @@
           #columns-container .col {
             padding: var(--spacing-sm);
             border-radius: var(--border-radius);
+            text-align: center;
           }
         </style>
 
@@ -1450,6 +1451,7 @@
             for (let i = 1; i < 9; i++) {
               const columns = document.createElement("div")
               columns.classList.add("cols")
+              columns.classList.add("cols-very-tight")
 
               for (let j = 0; j < i; j++) {
                 const column = document.createElement("div")
