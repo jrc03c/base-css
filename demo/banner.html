@@ -11,48 +11,50 @@
       <option value="link">link</option>
     </select>
 
-    <input type="submit" value="Show banner">
+    <input type="submit" value="Show banner" />
   </form>
 </div>
 
 <script>
-  const container = document.querySelector("#banner-form-container")
-  const form = container.querySelector("form")
+  !(() => {
+    const container = document.querySelector("#banner-form-container")
+    const form = container.querySelector("form")
 
-  form.addEventListener("submit", event => {
-    event.preventDefault()
-    event.stopImmediatePropagation()
+    form.addEventListener("submit", event => {
+      event.preventDefault()
+      event.stopImmediatePropagation()
 
-    const existingBanners = Array.from(document.querySelectorAll(".banner"))
+      const existingBanners = Array.from(document.querySelectorAll(".banner"))
 
-    existingBanners.forEach(b => {
-      if (b.parentElement) {
-        b.parentElement.removeChild(b)
-      }
-    })
+      existingBanners.forEach(b => {
+        if (b.parentElement) {
+          b.parentElement.removeChild(b)
+        }
+      })
 
-    const color = form.querySelector("select").value
-    const banner = document.createElement("div")
-    document.body.appendChild(banner)
-    banner.classList.add("banner")
-    banner.classList.add("bottom")
+      const color = form.querySelector("select").value
+      const banner = document.createElement("div")
+      document.body.appendChild(banner)
+      banner.classList.add("banner")
+      banner.classList.add("bottom")
 
-    banner.innerHTML = `
+      banner.innerHTML = `
       <div>Accept these cookies — or else!</div>
       <button>Okay...</button>
     `
 
-    const button = banner.querySelector("button")
+      const button = banner.querySelector("button")
 
-    if (color) {
-      banner.classList.add(color)
-      button.classList.add(color)
-    }
-
-    button.addEventListener("click", () => {
-      if (banner.parentElement) {
-        banner.parentElement.removeChild(banner)
+      if (color) {
+        banner.classList.add(color)
+        button.classList.add(color)
       }
+
+      button.addEventListener("click", () => {
+        if (banner.parentElement) {
+          banner.parentElement.removeChild(banner)
+        }
+      })
     })
-  })
+  })()
 </script>

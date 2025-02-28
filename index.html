@@ -42,21 +42,23 @@
     </nav>
 
     <script>
-      // The nav menu itself uses pure CSS. This JS is only here to add the
-      // convenience of closing the nav menu via the "Escape" key. In other words,
-      // the menu can function perfectly well without this bit of JS!
-      const nav = document.querySelector("nav")
-      const checkbox = nav.querySelector("input[type='checkbox']")
-      const label = nav.querySelector(".nav-burger").querySelector("label")
+      !(() => {
+        // The nav menu itself uses pure CSS. This JS is only here to add the
+        // convenience of closing the nav menu via the "Escape" key. In other words,
+        // the menu can function perfectly well without this bit of JS!
+        const nav = document.querySelector("nav")
+        const checkbox = nav.querySelector("input[type='checkbox']")
+        const label = nav.querySelector(".nav-burger").querySelector("label")
 
-      window.addEventListener("keydown", event => {
-        if (
-          event.key === "Escape" &&
-          (checkbox.checked || checkbox.getAttribute("checked"))
-        ) {
-          label.click()
-        }
-      })
+        window.addEventListener("keydown", event => {
+          if (
+            event.key === "Escape" &&
+            (checkbox.checked || checkbox.getAttribute("checked"))
+          ) {
+            label.click()
+          }
+        })
+      })()
     </script>
 
     <section>
@@ -164,30 +166,32 @@
   </pre>
 
           <script>
-            // This script just removes the extra whitespace around the code so that
-            // it displays as expected.
-            const pre = document.querySelector("pre")
-            const code = pre.querySelector("code")
+            !(() => {
+              // This script just removes the extra whitespace around the code so that
+              // it displays as expected.
+              const pre = document.querySelector("pre")
+              const code = pre.querySelector("code")
 
-            Array.from(pre.childNodes).forEach(child => {
-              if (child.textContent.trim().length === 0) {
-                pre.removeChild(child)
-              }
-            })
+              Array.from(pre.childNodes).forEach(child => {
+                if (child.textContent.trim().length === 0) {
+                  pre.removeChild(child)
+                }
+              })
 
-            const lines = code.textContent.split("\n").slice(1, -1)
+              const lines = code.textContent.split("\n").slice(1, -1)
 
-            const indentation = Math.min(
-              ...lines
-                .filter(line => line.trim().length > 0)
-                .map(line => line.match(/^(\s| )+/g)[0].length),
-            )
-
-            code.textContent = lines
-              .map(line =>
-                line.trim().length === 0 ? line : line.slice(indentation),
+              const indentation = Math.min(
+                ...lines
+                  .filter(line => line.trim().length > 0)
+                  .map(line => line.match(/^(\s| )+/g)[0].length),
               )
-              .join("\n")
+
+              code.textContent = lines
+                .map(line =>
+                  line.trim().length === 0 ? line : line.slice(indentation),
+                )
+                .join("\n")
+            })()
           </script>
         </div>
 
@@ -294,25 +298,28 @@
           </dialog>
 
           <script>
-            const modalShowButton = document.querySelector("#modal-show-button")
-            const modalCloseButton = document.querySelector(
-              "#modal-close-button",
-            )
-            const dialog = document.querySelector("dialog")
+            !(() => {
+              const modalShowButton =
+                document.querySelector("#modal-show-button")
+              const modalCloseButton = document.querySelector(
+                "#modal-close-button",
+              )
+              const dialog = document.querySelector("dialog")
 
-            modalShowButton.addEventListener("click", () => {
-              dialog.showModal()
-            })
+              modalShowButton.addEventListener("click", () => {
+                dialog.showModal()
+              })
 
-            modalCloseButton.addEventListener("click", () => {
-              dialog.close()
-            })
-
-            dialog.addEventListener("click", event => {
-              if (event.target === dialog) {
+              modalCloseButton.addEventListener("click", () => {
                 dialog.close()
-              }
-            })
+              })
+
+              dialog.addEventListener("click", event => {
+                if (event.target === dialog) {
+                  dialog.close()
+                }
+              })
+            })()
           </script>
         </div>
 
@@ -323,30 +330,32 @@
           </figure>
 
           <script>
-            const figure = document.querySelector("figure")
-            const img = figure.querySelector("img")
-            const canvas = document.createElement("canvas")
-            const width = 960
-            const height = 320
-            canvas.width = width
-            canvas.height = height
+            !(() => {
+              const figure = document.querySelector("figure")
+              const img = figure.querySelector("img")
+              const canvas = document.createElement("canvas")
+              const width = 960
+              const height = 320
+              canvas.width = width
+              canvas.height = height
 
-            const context = canvas.getContext("2d")
-            const blockSize = width / 32
-            context.fillStyle = "rgb(235, 235, 235)"
-            context.fillRect(0, 0, width, height)
+              const context = canvas.getContext("2d")
+              const blockSize = width / 32
+              context.fillStyle = "rgb(235, 235, 235)"
+              context.fillRect(0, 0, width, height)
 
-            for (let x = 0; x < width + blockSize; x += blockSize) {
-              for (let y = 0; y < height + blockSize; y += blockSize) {
-                const v = Math.random() * (256 - 64) + 64
-                context.beginPath()
-                context.arc(x, y, blockSize / 4, 0, Math.PI * 2)
-                context.fillStyle = `rgb(${v}, ${v}, ${v})`
-                context.fill()
+              for (let x = 0; x < width + blockSize; x += blockSize) {
+                for (let y = 0; y < height + blockSize; y += blockSize) {
+                  const v = Math.random() * (256 - 64) + 64
+                  context.beginPath()
+                  context.arc(x, y, blockSize / 4, 0, Math.PI * 2)
+                  context.fillStyle = `rgb(${v}, ${v}, ${v})`
+                  context.fill()
+                }
               }
-            }
 
-            img.src = canvas.toDataURL()
+              img.src = canvas.toDataURL()
+            })()
           </script>
         </div>
 
@@ -690,21 +699,25 @@
           </div>
 
           <script>
-            const progresses = Array.from(document.querySelectorAll("progress"))
-            const diff = (2 * Math.PI) / progresses.length
-            let frame = 0
+            !(() => {
+              const progresses = Array.from(
+                document.querySelectorAll("progress"),
+              )
+              const diff = (2 * Math.PI) / progresses.length
+              let frame = 0
 
-            const loop = () => {
-              progresses.forEach((p, i) => {
-                p.value = Math.sin(frame / 30 + i * diff) * 0.25 + 0.5
-                p.innerHTML = p.value * 100 + "%"
-              })
+              const loop = () => {
+                progresses.forEach((p, i) => {
+                  p.value = Math.sin(frame / 30 + i * diff) * 0.25 + 0.5
+                  p.innerHTML = p.value * 100 + "%"
+                })
 
-              frame++
-              window.requestAnimationFrame(loop)
-            }
+                frame++
+                window.requestAnimationFrame(loop)
+              }
 
-            loop()
+              loop()
+            })()
           </script>
         </div>
 
@@ -1376,47 +1389,49 @@
         </div>
 
         <script>
-          const container = document.querySelector("#banner-form-container")
-          const form = container.querySelector("form")
+          !(() => {
+            const container = document.querySelector("#banner-form-container")
+            const form = container.querySelector("form")
 
-          form.addEventListener("submit", event => {
-            event.preventDefault()
-            event.stopImmediatePropagation()
+            form.addEventListener("submit", event => {
+              event.preventDefault()
+              event.stopImmediatePropagation()
 
-            const existingBanners = Array.from(
-              document.querySelectorAll(".banner"),
-            )
+              const existingBanners = Array.from(
+                document.querySelectorAll(".banner"),
+              )
 
-            existingBanners.forEach(b => {
-              if (b.parentElement) {
-                b.parentElement.removeChild(b)
-              }
-            })
+              existingBanners.forEach(b => {
+                if (b.parentElement) {
+                  b.parentElement.removeChild(b)
+                }
+              })
 
-            const color = form.querySelector("select").value
-            const banner = document.createElement("div")
-            document.body.appendChild(banner)
-            banner.classList.add("banner")
-            banner.classList.add("bottom")
+              const color = form.querySelector("select").value
+              const banner = document.createElement("div")
+              document.body.appendChild(banner)
+              banner.classList.add("banner")
+              banner.classList.add("bottom")
 
-            banner.innerHTML = `
+              banner.innerHTML = `
       <div>Accept these cookies — or else!</div>
       <button>Okay...</button>
     `
 
-            const button = banner.querySelector("button")
+              const button = banner.querySelector("button")
 
-            if (color) {
-              banner.classList.add(color)
-              button.classList.add(color)
-            }
-
-            button.addEventListener("click", () => {
-              if (banner.parentElement) {
-                banner.parentElement.removeChild(banner)
+              if (color) {
+                banner.classList.add(color)
+                button.classList.add(color)
               }
+
+              button.addEventListener("click", () => {
+                if (banner.parentElement) {
+                  banner.parentElement.removeChild(banner)
+                }
+              })
             })
-          })
+          })()
         </script>
       </div>
     </section>

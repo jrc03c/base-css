@@ -34,19 +34,21 @@
 </nav>
 
 <script>
-  // The nav menu itself uses pure CSS. This JS is only here to add the
-  // convenience of closing the nav menu via the "Escape" key. In other words,
-  // the menu can function perfectly well without this bit of JS!
-  const nav = document.querySelector("nav")
-  const checkbox = nav.querySelector("input[type='checkbox']")
-  const label = nav.querySelector(".nav-burger").querySelector("label")
+  !(() => {
+    // The nav menu itself uses pure CSS. This JS is only here to add the
+    // convenience of closing the nav menu via the "Escape" key. In other words,
+    // the menu can function perfectly well without this bit of JS!
+    const nav = document.querySelector("nav")
+    const checkbox = nav.querySelector("input[type='checkbox']")
+    const label = nav.querySelector(".nav-burger").querySelector("label")
 
-  window.addEventListener("keydown", event => {
-    if (
-      event.key === "Escape" &&
-      (checkbox.checked || checkbox.getAttribute("checked"))
-    ) {
-      label.click()
-    }
-  })
+    window.addEventListener("keydown", event => {
+      if (
+        event.key === "Escape" &&
+        (checkbox.checked || checkbox.getAttribute("checked"))
+      ) {
+        label.click()
+      }
+    })
+  })()
 </script>

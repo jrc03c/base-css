@@ -96,22 +96,24 @@
   </dialog>
 
   <script>
-    const modalShowButton = document.querySelector("#modal-show-button")
-    const modalCloseButton = document.querySelector("#modal-close-button")
-    const dialog = document.querySelector("dialog")
+    !(() => {
+      const modalShowButton = document.querySelector("#modal-show-button")
+      const modalCloseButton = document.querySelector("#modal-close-button")
+      const dialog = document.querySelector("dialog")
 
-    modalShowButton.addEventListener("click", () => {
-      dialog.showModal()
-    })
+      modalShowButton.addEventListener("click", () => {
+        dialog.showModal()
+      })
 
-    modalCloseButton.addEventListener("click", () => {
-      dialog.close()
-    })
-
-    dialog.addEventListener("click", event => {
-      if (event.target === dialog) {
+      modalCloseButton.addEventListener("click", () => {
         dialog.close()
-      }
-    })
+      })
+
+      dialog.addEventListener("click", event => {
+        if (event.target === dialog) {
+          dialog.close()
+        }
+      })
+    })()
   </script>
 </div>
