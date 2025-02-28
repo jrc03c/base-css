@@ -1889,9 +1889,9 @@ nav {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100vw;
-  min-width: 100vw;
-  max-width: 100vw;
+  width: calc(100vw - calc(var(--spacing) / 2));
+  min-width: calc(100vw - calc(var(--spacing) / 2));
+  max-width: calc(100vw - calc(var(--spacing) / 2));
   height: 4.5em;
   min-height: 4.5em;
   max-height: 4.5em;
@@ -1980,9 +1980,9 @@ nav > .nav-right {
 
 nav > .nav-right {
   flex-grow: 999999;
-  width: fit-content;
+  width: 1px;
   min-width: 1px;
-  max-width: fit-content;
+  max-width: 100%;
 }
 
 nav > .nav-right > .nav-burger {
