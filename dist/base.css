@@ -1060,6 +1060,30 @@ code {
   background-color: var(--color-gray-1);
 }
 
+.cols {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: flex-start;
+  gap: var(--spacing);
+}
+
+.cols .col {
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+  min-width: 0px;
+  max-width: 100%;
+  flex-grow: 999999999;
+  flex-shrink: 999999999;
+}
+
 .container {
   width: calc(960px - calc(var(--spacing) * 4));
   min-width: calc(960px - calc(var(--spacing) * 4));

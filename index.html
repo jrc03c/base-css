@@ -1433,6 +1433,37 @@
             })
           })()
         </script>
+
+        <style>
+          #columns-container .col {
+            padding: var(--spacing-sm);
+            border-radius: var(--border-radius);
+          }
+        </style>
+
+        <div id="columns-container"></div>
+
+        <script>
+          !(() => {
+            const container = document.querySelector("#columns-container")
+
+            for (let i = 1; i < 9; i++) {
+              const columns = document.createElement("div")
+              columns.classList.add("cols")
+
+              for (let j = 0; j < i; j++) {
+                const column = document.createElement("div")
+                column.classList.add("col")
+                column.classList.add("bg-teal-1")
+                column.classList.add("text-teal-8")
+                column.innerHTML = `Column ${j + 1}`
+                columns.appendChild(column)
+              }
+
+              container.appendChild(columns)
+            }
+          })()
+        </script>
       </div>
     </section>
 
