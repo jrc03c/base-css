@@ -1994,14 +1994,14 @@ nav > .nav-right > .nav-burger > input[type="checkbox"] {
   display: none;
 }
 
-nav > .nav-right > .nav-burger > label,
-nav > .nav-right > .nav-burger > label::before {
+nav > .nav-right > .nav-burger > label {
   display: inline-flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
   align-content: center;
   align-items: center;
+  gap: 0.5em;
   width: 100%;
   min-width: 100%;
   max-width: 100%;
@@ -3046,8 +3046,16 @@ ul ul {
     box-shadow: var(--shadow);
   }
 
+  nav > .nav-right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+  }
+
   nav > .nav-right > .nav-burger {
-    display: inline;
     width: 3em;
     min-width: 3em;
     max-width: 3em;
@@ -3058,7 +3066,7 @@ ul ul {
     border: none !important;
     box-shadow: none !important;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-content: center;
@@ -3067,27 +3075,47 @@ ul ul {
     right: -1em;
   }
 
+  nav > .nav-right > .nav-burger > label {
+    position: fixed;
+  }
+
+  nav > .nav-right > .nav-burger > label::after,
   nav > .nav-right > .nav-burger > label::before {
-    content: "||";
+    content: "";
+    position: absolute;
     display: block;
-    width: 0.5em;
-    min-width: 0.5em;
-    max-width: 0.5em;
-    height: 1em;
-    min-height: 1em;
-    max-height: 1em;
-    line-height: 1em;
-    transform: rotate(90deg);
+    width: 1.5em;
+    min-width: 1.5em;
+    max-width: 1.5em;
+    height: 2px;
+    min-height: 2px;
+    max-height: 2px;
+    background-color: var(--color-gray-8);
+    transition: transform var(--transition-duration) ease-out;
+  }
+
+  nav > .nav-right > .nav-burger > label::before {
+    transform: translateY(-0.25em);
+  }
+
+  nav > .nav-right > .nav-burger > label::after {
+    transform: translateY(0.25em);
   }
 
   nav:has(input[type="checkbox"]:checked)
     > .nav-right
     > .nav-burger
-    label::before {
-    content: "✕";
-    width: 1em;
-    min-width: 1em;
-    max-width: 1em;
+    > label::before {
+    transform: rotate(45deg);
+    transform-origin: 50% 50%;
+  }
+
+  nav:has(input[type="checkbox"]:checked)
+    > .nav-right
+    > .nav-burger
+    > label::after {
+    transform: rotate(-45deg);
+    transform-origin: 50% 50%;
   }
 
   nav > .nav-right > menu {
