@@ -35,7 +35,7 @@ function rebuild() {
     )
 
     // (5) index.html
-    const template = fs.readFileSync("demo/index.html", "utf8")
+    const template = fs.readFileSync("demo/_index.html", "utf8")
     const includes = template.match(/\{%\s*?include.*?%\}/g)
     let out = template.slice()
 
