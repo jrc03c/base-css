@@ -21979,55 +21979,65 @@ ${JSON.stringify(newTargetLocation, null, 2)}
   var template8 = (
     /* html */
     `
-  <footer>
-    <div class="container row row-comfy row-top">
+  <div class="footer row row-comfy row-top">
+    <div>
       <div>
-        <div>
-          <a href="">Home</a>
-        </div>
-
-        <div>
-          <a href="">About</a>
-        </div>
-
-        <div>
-          <a href="">Documentation</a>
-        </div>
-
-        <div>
-          <a href="">FAQ</a>
-        </div>
-
-        <div>
-          <a href="">Contact</a>
-        </div>
+        <a href="">Home</a>
       </div>
 
       <div>
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-          condimentum faucibus tellus, non consectetur felis pharetra ac. Aliquam
-          dapibus dignissim rhoncus. Cras interdum ante vitae libero gravida, eget
-          posuere metus tempus. Maecenas in fermentum eros, a commodo massa.
-          Aliquam eu gravida urna. Sed porttitor pulvinar sem, a sodales risus
-          semper eu.
-        </div>
+        <a href="">About</a>
+      </div>
 
-        <br />
+      <div>
+        <a href="">Documentation</a>
+      </div>
 
-        <div>Copyright Nobody 2025.</div>
+      <div>
+        <a href="">FAQ</a>
+      </div>
+
+      <div>
+        <a href="">Contact</a>
       </div>
     </div>
-  </footer>
+
+    <div>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+        condimentum faucibus tellus, non consectetur felis pharetra ac. Aliquam
+        dapibus dignissim rhoncus. Cras interdum ante vitae libero gravida, eget
+        posuere metus tempus. Maecenas in fermentum eros, a commodo massa.
+        Aliquam eu gravida urna. Sed porttitor pulvinar sem, a sodales risus
+        semper eu.
+      </div>
+
+      <br />
+
+      <div>Copyright Nobody 2025.</div>
+    </div>
+  </div>
 `
   );
   var FooterView = createVueComponentWithCSS({
     name: "x-footer-view",
-    template: template8,
+    template: "<div>(See the footer at the bottom of the page.)</div>",
     data() {
       return {
-        css: css8
+        css: css8,
+        footer: null,
+        footerApp: null
       };
+    },
+    mounted() {
+      this.footer = document.createElement("footer");
+      document.body.appendChild(this.footer);
+      this.footerApp = createApp({ template: template8 });
+      this.footerApp.mount(this.footer);
+    },
+    unmounted() {
+      this.footerApp.unmount();
+      this.footer.parentElement.removeChild(this.footer);
     }
   });
 
