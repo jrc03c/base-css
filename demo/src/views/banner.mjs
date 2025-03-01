@@ -41,7 +41,7 @@ const BannerView = createVueComponentWithCSS({
 
   data() {
     return {
-      color: "info",
+      color: "warning",
       css,
     }
   },

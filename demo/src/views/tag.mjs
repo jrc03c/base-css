@@ -2,14 +2,18 @@
 // CSS
 // -----------------------------------------------------------------------------
 
-const css = /* css */ ``
+const css = /* css */ `
+  .tags-row {
+    flex-wrap: wrap;
+  }
+`
 
 // -----------------------------------------------------------------------------
 // HTML
 // -----------------------------------------------------------------------------
 
 const template = /* html */ `
-  <div>
+  <div class="row row-left row-tight tags-row">
     <span class="tag">Default</span>
     <span class="tag dark">Dark</span>
     <span class="tag danger">Danger</span>
@@ -20,7 +24,7 @@ const template = /* html */ `
     <span class="tag link">Link</span>
   </div>
 
-  <div>
+  <div class="row row-left row-tight tags-row">
     <span class="tag">
       <button class="close"></button>
       Default

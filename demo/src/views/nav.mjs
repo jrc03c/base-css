@@ -43,6 +43,8 @@ const template = /* html */ `
       </menu>
     </div>
   </nav>
+
+  <div>(See the navbar at the top of the page.)</div>
 `
 
 // -----------------------------------------------------------------------------

@@ -21494,7 +21494,7 @@ ${JSON.stringify(newTargetLocation, null, 2)}
     template,
     data() {
       return {
-        color: "info",
+        color: "warning",
         css
       };
     },
@@ -22584,6 +22584,8 @@ ${JSON.stringify(newTargetLocation, null, 2)}
       </menu>
     </div>
   </nav>
+
+  <div>(See the navbar at the top of the page.)</div>
 `
   );
   var NavView = createVueComponentWithCSS({
@@ -23122,12 +23124,16 @@ ${JSON.stringify(newTargetLocation, null, 2)}
   // demo/src/views/tag.mjs
   var css17 = (
     /* css */
-    ``
+    `
+  .tags-row {
+    flex-wrap: wrap;
+  }
+`
   );
   var template17 = (
     /* html */
     `
-  <div>
+  <div class="row row-left row-tight tags-row">
     <span class="tag">Default</span>
     <span class="tag dark">Dark</span>
     <span class="tag danger">Danger</span>
@@ -23138,7 +23144,7 @@ ${JSON.stringify(newTargetLocation, null, 2)}
     <span class="tag link">Link</span>
   </div>
 
-  <div>
+  <div class="row row-left row-tight tags-row">
     <span class="tag">
       <button class="close"></button>
       Default
@@ -23250,23 +23256,16 @@ ${JSON.stringify(newTargetLocation, null, 2)}
 
         <aside>
           <menu>
-            <li><router-link to="/banner">Banner</router-link></li>
-            <li><router-link to="/blockquote">Blockquote</router-link></li>
-            <li><router-link to="/button">Button</router-link></li>
-            <li><router-link to="/code">Code</router-link></li>
-            <li><router-link to="/columns">Columns</router-link></li>
-            <li><router-link to="/details">Details</router-link></li>
-            <li><router-link to="/figure">Figure</router-link></li>
-            <li><router-link to="/footer">Footer</router-link></li>
-            <li><router-link to="/form">Form</router-link></li>
-            <li><router-link to="/headings">Headings</router-link></li>
-            <li><router-link to="/home">Home</router-link></li>
-            <li><router-link to="/lists">Lists</router-link></li>
-            <li><router-link to="/modal">Modal</router-link></li>
-            <li><router-link to="/nav">Nav</router-link></li>
-            <li><router-link to="/progress">Progress</router-link></li>
-            <li><router-link to="/table">Table</router-link></li>
-            <li><router-link to="/tag">Tag</router-link></li>
+            <li :key="route.path" v-for="route in routes">
+              <span
+                v-if="currentRouteFullPath.includes(route.path)">
+                {{ route.title }}
+              </span>
+
+              <router-link :to="route.path" v-else>
+                {{ route.title }}
+              </router-link>
+            </li>
           </menu>
         </aside>
       </div>
@@ -23283,8 +23282,32 @@ ${JSON.stringify(newTargetLocation, null, 2)}
       template: template18,
       data() {
         return {
-          css: css18
+          css: css18,
+          currentRouteFullPath: "/",
+          routes: [
+            { path: "/banner", title: "Banner" },
+            { path: "/blockquote", title: "Blockquote" },
+            { path: "/button", title: "Button" },
+            { path: "/code", title: "Code" },
+            { path: "/columns", title: "Columns" },
+            { path: "/details", title: "Details" },
+            { path: "/figure", title: "Figure" },
+            { path: "/footer", title: "Footer" },
+            { path: "/form", title: "Form" },
+            { path: "/headings", title: "Headings" },
+            { path: "/lists", title: "Lists" },
+            { path: "/modal", title: "Modal" },
+            { path: "/nav", title: "Nav" },
+            { path: "/progress", title: "Progress" },
+            { path: "/table", title: "Table" },
+            { path: "/tag", title: "Tag" }
+          ]
         };
+      },
+      mounted() {
+        this.$router.beforeEach((to) => {
+          this.currentRouteFullPath = to.fullPath;
+        });
       }
     })
   );
