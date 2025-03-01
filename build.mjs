@@ -1,7 +1,6 @@
 import { execSync } from "node:child_process"
 import { watch } from "@jrc03c/watch"
 import fs from "node:fs"
-import path from "node:path"
 import process from "node:process"
 
 function rebuild() {
@@ -34,23 +33,14 @@ function rebuild() {
       `npx esbuild dist/base.norm.css --minify --outfile=dist/base.norm.min.css`,
     )
 
-    // (5) index.html
-    const template = fs.readFileSync("demo/_index.html", "utf8")
-    const includes = template.match(/\{%\s*?include.*?%\}/g)
-    let out = template.slice()
+    // (5) demo
+    fs.copyFileSync("dist/base.norm.min.css", "demo/base.norm.min.css")
 
-    includes.forEach(i => {
-      const file = path.join(
-        "demo",
-        i.split("include")[1].split("%}")[0].trim(),
-      )
+    execSync(
+      `npx esbuild demo/src/main.mjs --bundle --outfile=demo/bundle.js`,
+      { encoding: "utf8" },
+    )
 
-      const raw = fs.readFileSync(file, "utf8")
-      out = out.replaceAll(i, raw)
-    })
-
-    fs.writeFileSync("index.html", out, "utf8")
-    execSync(`npx prettier -w index.html`, { encoding: "utf8" })
     console.log("\nDone! 🎉\n")
   } catch (e) {
     console.error(e)
@@ -59,8 +49,15 @@ function rebuild() {
 
 if (process.argv.indexOf("-w") > -1 || process.argv.indexOf("--watch") > -1) {
   watch({
-    target: ".",
-    include: ["demo", "src"],
+    target: "demo",
+    exclude: ["base.norm.min.css", "bundle.js"],
+    created: rebuild,
+    modified: rebuild,
+    deleted: rebuild,
+  })
+
+  watch({
+    target: "src",
     created: rebuild,
     modified: rebuild,
     deleted: rebuild,

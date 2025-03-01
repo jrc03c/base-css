@@ -1,4 +1,14 @@
-<div class="box">
+// -----------------------------------------------------------------------------
+// CSS
+// -----------------------------------------------------------------------------
+
+const css = /* css */ ``
+
+// -----------------------------------------------------------------------------
+// HTML
+// -----------------------------------------------------------------------------
+
+const template = /* html */ `
   <div class="control">
     <input type="checkbox" />
     <label>Will be attending</label>
@@ -16,7 +26,7 @@
 
   <div class="control">
     <label>Email address</label>
-    <input placeholder="someone@example.com" ="email" />
+    <input placeholder="someone@example.com" type="email" />
   </div>
 
   <div class="control">
@@ -137,4 +147,23 @@
     <label>Link</label>
     <input class="link" placeholder="Link!" type="text" />
   </div>
-</div>
+`
+
+// -----------------------------------------------------------------------------
+// JS
+// -----------------------------------------------------------------------------
+
+import { createVueComponentWithCSS } from "@jrc03c/vue-component-with-css"
+
+const FormView = createVueComponentWithCSS({
+  name: "x-form-view",
+  template,
+
+  data() {
+    return {
+      css,
+    }
+  },
+})
+
+export { FormView }

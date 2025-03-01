@@ -1964,6 +1964,17 @@ input:not([type="submit"]).warning {
   border: var(--line-thickness) solid var(--color-yellow-6);
 }
 
+menu {
+  margin: 0 0 var(--spacing) 0;
+  padding: 0;
+}
+
+menu li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 nav {
   position: absolute;
   left: 0;
@@ -2255,6 +2266,10 @@ progress.warning {
 
 section {
   margin: 0;
+  padding: var(--spacing-lg);
+}
+
+section:has(div.container) {
   padding: var(--spacing-xl) var(--spacing-lg);
 }
 

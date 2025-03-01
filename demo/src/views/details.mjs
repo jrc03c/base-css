@@ -1,4 +1,14 @@
-<div>
+// -----------------------------------------------------------------------------
+// CSS
+// -----------------------------------------------------------------------------
+
+const css = /* css */ ``
+
+// -----------------------------------------------------------------------------
+// HTML
+// -----------------------------------------------------------------------------
+
+const template = /* html */ `
   <details>
     <summary>Click here for more details.</summary>
 
@@ -166,4 +176,23 @@
 
     <p><a href="https://cupcakeipsum.com">cupcakeipsum.com</a></p>
   </details>
-</div>
+`
+
+// -----------------------------------------------------------------------------
+// JS
+// -----------------------------------------------------------------------------
+
+import { createVueComponentWithCSS } from "@jrc03c/vue-component-with-css"
+
+const DetailsView = createVueComponentWithCSS({
+  name: "x-details-view",
+  template,
+
+  data() {
+    return {
+      css,
+    }
+  },
+})
+
+export { DetailsView }

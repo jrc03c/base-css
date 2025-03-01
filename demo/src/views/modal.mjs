@@ -1,22 +1,30 @@
-<div>
-  <style>
+// -----------------------------------------------------------------------------
+// CSS
+// -----------------------------------------------------------------------------
+
+const css = /* css */ `
+  dialog .box {
+    width: 50vw;
+    min-width: 50vw;
+    max-width: 50vw;
+    max-height: calc(100vh - calc(var(--spacing) * 4));
+    overflow-y: auto;
+  }
+
+  @media (max-width: 768px) {
     dialog .box {
-      width: 50vw;
-      min-width: 50vw;
-      max-width: 50vw;
-      max-height: calc(100vh - calc(var(--spacing) * 4));
-      overflow-y: auto;
+      width: calc(100vw - calc(var(--spacing) * 4));
+      min-width: calc(100vw - calc(var(--spacing) * 4));
+      max-width: calc(100vw - calc(var(--spacing) * 4));
     }
+  }
+`
 
-    @media (max-width: 768px) {
-      dialog .box {
-        width: calc(100vw - calc(var(--spacing) * 4));
-        min-width: calc(100vw - calc(var(--spacing) * 4));
-        max-width: calc(100vw - calc(var(--spacing) * 4));
-      }
-    }
-  </style>
+// -----------------------------------------------------------------------------
+// HTML
+// -----------------------------------------------------------------------------
 
+const template = /* html */ `
   <div>
     <button id="modal-show-button">Show modal</button>
   </div>
@@ -94,26 +102,43 @@
       </p>
     </div>
   </dialog>
+`
 
-  <script>
-    !(() => {
-      const modalShowButton = document.querySelector("#modal-show-button")
-      const modalCloseButton = document.querySelector("#modal-close-button")
-      const dialog = document.querySelector("dialog")
+// -----------------------------------------------------------------------------
+// JS
+// -----------------------------------------------------------------------------
 
-      modalShowButton.addEventListener("click", () => {
-        dialog.showModal()
-      })
+import { createVueComponentWithCSS } from "@jrc03c/vue-component-with-css"
 
-      modalCloseButton.addEventListener("click", () => {
-        dialog.close()
-      })
+const ModalView = createVueComponentWithCSS({
+  name: "x-modal-view",
+  template,
 
-      dialog.addEventListener("click", event => {
-        if (event.target === dialog) {
-          dialog.close()
-        }
-      })
-    })()
-  </script>
-</div>
+  data() {
+    return {
+      css,
+    }
+  },
+})
+
+export { ModalView }
+
+// !(() => {
+//   const modalShowButton = document.querySelector("#modal-show-button")
+//   const modalCloseButton = document.querySelector("#modal-close-button")
+//   const dialog = document.querySelector("dialog")
+
+//   modalShowButton.addEventListener("click", () => {
+//     dialog.showModal()
+//   })
+
+//   modalCloseButton.addEventListener("click", () => {
+//     dialog.close()
+//   })
+
+//   dialog.addEventListener("click", event => {
+//     if (event.target === dialog) {
+//       dialog.close()
+//     }
+//   })
+// })()
