@@ -26,11 +26,13 @@ const css = /* css */ `
 
 const template = /* html */ `
   <div>
-    <button id="modal-show-button">Show modal</button>
+    <button @click="open">Show modal</button>
   </div>
 
-  <dialog>
-    <button class="close" id="modal-close-button"></button>
+  <dialog
+    @click="$event.target === $refs.dialog ? close() : () => {}"
+    ref="dialog">
+    <button @click="close" class="close"></button>
 
     <div class="box">
       <p><b>Nietzsche Ipsum</b></p>
@@ -119,26 +121,16 @@ const ModalView = createVueComponentWithCSS({
       css,
     }
   },
+
+  methods: {
+    close() {
+      this.$refs.dialog.close()
+    },
+
+    open() {
+      this.$refs.dialog.showModal()
+    },
+  },
 })
 
 export { ModalView }
-
-// !(() => {
-//   const modalShowButton = document.querySelector("#modal-show-button")
-//   const modalCloseButton = document.querySelector("#modal-close-button")
-//   const dialog = document.querySelector("dialog")
-
-//   modalShowButton.addEventListener("click", () => {
-//     dialog.showModal()
-//   })
-
-//   modalCloseButton.addEventListener("click", () => {
-//     dialog.close()
-//   })
-
-//   dialog.addEventListener("click", event => {
-//     if (event.target === dialog) {
-//       dialog.close()
-//     }
-//   })
-// })()

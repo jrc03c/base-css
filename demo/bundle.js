@@ -22444,11 +22444,13 @@ ${JSON.stringify(newTargetLocation, null, 2)}
     /* html */
     `
   <div>
-    <button id="modal-show-button">Show modal</button>
+    <button @click="open">Show modal</button>
   </div>
 
-  <dialog>
-    <button class="close" id="modal-close-button"></button>
+  <dialog
+    @click="$event.target === $refs.dialog ? close() : () => {}"
+    ref="dialog">
+    <button @click="close" class="close"></button>
 
     <div class="box">
       <p><b>Nietzsche Ipsum</b></p>
@@ -22529,6 +22531,14 @@ ${JSON.stringify(newTargetLocation, null, 2)}
       return {
         css: css13
       };
+    },
+    methods: {
+      close() {
+        this.$refs.dialog.close();
+      },
+      open() {
+        this.$refs.dialog.showModal();
+      }
     }
   });
 
