@@ -1044,7 +1044,8 @@ button:active,
 input[type="submit"]:active {
   filter: brightness(var(--brightness-active));
   box-shadow: none;
-  transform: scale(0.95);
+  transform: scale(0.975);
+  transform-origin: 50% 50%;
 }
 
 button.close:active,
