@@ -22550,15 +22550,15 @@ ${JSON.stringify(newTargetLocation, null, 2)}
   var template14 = (
     /* html */
     `
-  <nav class="light">
+  <nav class="light" ref="nav">
     <div class="nav-left">
       <a href=""><b>base.css</b></a>
     </div>
 
     <div class="nav-right">
       <div class="nav-burger">
-        <input id="nav-burger-checkbox" type="checkbox" />
-        <label for="nav-burger-checkbox"></label>
+        <input id="nav-burger-checkbox" ref="checkbox" type="checkbox" />
+        <label for="nav-burger-checkbox" ref="label"></label>
       </div>
 
       <menu>
@@ -22593,6 +22593,20 @@ ${JSON.stringify(newTargetLocation, null, 2)}
       return {
         css: css14
       };
+    },
+    methods: {
+      onKeyDown(event) {
+        const { checkbox, label } = this.$refs;
+        if (event.key === "Escape" && (checkbox.checked || checkbox.getAttribute("checked"))) {
+          label.click();
+        }
+      }
+    },
+    mounted() {
+      window.addEventListener("keydown", this.onKeyDown);
+    },
+    unmounted() {
+      window.removeEventListener("keydown", this.onKeyDown);
     }
   });
 

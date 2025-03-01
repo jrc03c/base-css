@@ -9,15 +9,15 @@ const css = /* css */ ``
 // -----------------------------------------------------------------------------
 
 const template = /* html */ `
-  <nav class="light">
+  <nav class="light" ref="nav">
     <div class="nav-left">
       <a href=""><b>base.css</b></a>
     </div>
 
     <div class="nav-right">
       <div class="nav-burger">
-        <input id="nav-burger-checkbox" type="checkbox" />
-        <label for="nav-burger-checkbox"></label>
+        <input id="nav-burger-checkbox" ref="checkbox" type="checkbox" />
+        <label for="nav-burger-checkbox" ref="label"></label>
       </div>
 
       <menu>
@@ -60,24 +60,30 @@ const NavView = createVueComponentWithCSS({
       css,
     }
   },
+
+  methods: {
+    onKeyDown(event) {
+      const { checkbox, label } = this.$refs
+
+      if (
+        event.key === "Escape" &&
+        (checkbox.checked || checkbox.getAttribute("checked"))
+      ) {
+        label.click()
+      }
+    },
+  },
+
+  mounted() {
+    // The nav menu itself uses pure CSS. This JS is only here to add the
+    // convenience of closing the nav menu via the "Escape" key. In other words,
+    // the menu can function perfectly well without this bit of JS!
+    window.addEventListener("keydown", this.onKeyDown)
+  },
+
+  unmounted() {
+    window.removeEventListener("keydown", this.onKeyDown)
+  },
 })
 
 export { NavView }
-
-// !(() => {
-//   // The nav menu itself uses pure CSS. This JS is only here to add the
-//   // convenience of closing the nav menu via the "Escape" key. In other words,
-//   // the menu can function perfectly well without this bit of JS!
-//   const nav = document.querySelector("nav")
-//   const checkbox = nav.querySelector("input[type='checkbox']")
-//   const label = nav.querySelector(".nav-burger").querySelector("label")
-
-//   window.addEventListener("keydown", event => {
-//     if (
-//       event.key === "Escape" &&
-//       (checkbox.checked || checkbox.getAttribute("checked"))
-//     ) {
-//       label.click()
-//     }
-//   })
-// })()
