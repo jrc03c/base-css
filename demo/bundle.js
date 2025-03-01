@@ -21630,8 +21630,8 @@ ${JSON.stringify(newTargetLocation, null, 2)}
       block:
     </p>
 
-    <pre>
-      <code>
+    <pre ref="pre">
+      <code ref="code">
         function fib(n) {
           if (n < 3) return 1
           return fib(n - 1) + fib(n - 2)
@@ -21648,6 +21648,19 @@ ${JSON.stringify(newTargetLocation, null, 2)}
       return {
         css: css4
       };
+    },
+    mounted() {
+      const { code, pre } = this.$refs;
+      Array.from(pre.childNodes).forEach((child) => {
+        if (child.textContent.trim().length === 0) {
+          pre.removeChild(child);
+        }
+      });
+      const lines = code.textContent.split("\n").slice(1, -1);
+      const indentation = Math.min(
+        ...lines.filter((line) => line.trim().length > 0).map((line) => line.match(/^(\s| )+/g)[0].length)
+      );
+      code.textContent = lines.map((line) => line.trim().length === 0 ? line : line.slice(indentation)).join("\n");
     }
   });
 

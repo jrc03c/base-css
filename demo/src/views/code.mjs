@@ -16,8 +16,8 @@ const template = /* html */ `
       block:
     </p>
 
-    <pre>
-      <code>
+    <pre ref="pre">
+      <code ref="code">
         function fib(n) {
           if (n < 3) return 1
           return fib(n - 1) + fib(n - 2)
@@ -42,33 +42,30 @@ const CodeView = createVueComponentWithCSS({
       css,
     }
   },
+
+  mounted() {
+    // This script just removes the extra whitespace around the code so that it
+    // displays as expected.
+    const { code, pre } = this.$refs
+
+    Array.from(pre.childNodes).forEach(child => {
+      if (child.textContent.trim().length === 0) {
+        pre.removeChild(child)
+      }
+    })
+
+    const lines = code.textContent.split("\n").slice(1, -1)
+
+    const indentation = Math.min(
+      ...lines
+        .filter(line => line.trim().length > 0)
+        .map(line => line.match(/^(\s| )+/g)[0].length),
+    )
+
+    code.textContent = lines
+      .map(line => (line.trim().length === 0 ? line : line.slice(indentation)))
+      .join("\n")
+  },
 })
 
 export { CodeView }
-
-// !(() => {
-//   // This script just removes the extra whitespace around the code so that
-//   // it displays as expected.
-//   const pre = document.querySelector("pre")
-//   const code = pre.querySelector("code")
-
-//   Array.from(pre.childNodes).forEach(child => {
-//     if (child.textContent.trim().length === 0) {
-//       pre.removeChild(child)
-//     }
-//   })
-
-//   const lines = code.textContent.split("\n").slice(1, -1)
-
-//   const indentation = Math.min(
-//     ...lines
-//       .filter(line => line.trim().length > 0)
-//       .map(line => line.match(/^(\s| )+/g)[0].length),
-//   )
-
-//   code.textContent = lines
-//     .map(line =>
-//       line.trim().length === 0 ? line : line.slice(indentation),
-//     )
-//     .join("\n")
-// })()
