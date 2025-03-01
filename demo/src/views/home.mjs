@@ -11,7 +11,7 @@ const css = /* css */ ``
 const template = /* html */ `
   <div>
     <b>base.css</b> is <a href="https://github.com/jrc03c">@jrc03c</a>'s core
-    CSS library. He plans to build on top of it to create other CSS libraries.
+    CSS library. He plans to build other CSS libraries on top of it.
   </div>
 `
 
