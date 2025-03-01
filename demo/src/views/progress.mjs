@@ -59,26 +59,36 @@ const ProgressView = createVueComponentWithCSS({
   data() {
     return {
       css,
+      isRunning: false,
     }
+  },
+
+  mounted() {
+    const progresses = Array.from(document.querySelectorAll("progress"))
+    const diff = (2 * Math.PI) / progresses.length
+    let frame = 0
+    this.isRunning = true
+
+    const loop = () => {
+      if (!this.isRunning) {
+        return
+      }
+
+      progresses.forEach((p, i) => {
+        p.value = Math.sin(frame / 30 + i * diff) * 0.25 + 0.5
+        p.innerHTML = p.value * 100 + "%"
+      })
+
+      frame++
+      window.requestAnimationFrame(loop)
+    }
+
+    loop()
+  },
+
+  unmounted() {
+    this.isRunning = false
   },
 })
 
 export { ProgressView }
-
-// !(() => {
-//   const progresses = Array.from(document.querySelectorAll("progress"))
-//   const diff = (2 * Math.PI) / progresses.length
-//   let frame = 0
-
-//   const loop = () => {
-//     progresses.forEach((p, i) => {
-//       p.value = Math.sin(frame / 30 + i * diff) * 0.25 + 0.5
-//       p.innerHTML = p.value * 100 + "%"
-//     })
-
-//     frame++
-//     window.requestAnimationFrame(loop)
-//   }
-
-//   loop()
-// })()

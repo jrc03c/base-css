@@ -22660,8 +22660,30 @@ ${JSON.stringify(newTargetLocation, null, 2)}
     template: template15,
     data() {
       return {
-        css: css15
+        css: css15,
+        isRunning: false
       };
+    },
+    mounted() {
+      const progresses = Array.from(document.querySelectorAll("progress"));
+      const diff = 2 * Math.PI / progresses.length;
+      let frame = 0;
+      this.isRunning = true;
+      const loop = () => {
+        if (!this.isRunning) {
+          return;
+        }
+        progresses.forEach((p2, i) => {
+          p2.value = Math.sin(frame / 30 + i * diff) * 0.25 + 0.5;
+          p2.innerHTML = p2.value * 100 + "%";
+        });
+        frame++;
+        window.requestAnimationFrame(loop);
+      };
+      loop();
+    },
+    unmounted() {
+      this.isRunning = false;
     }
   });
 
