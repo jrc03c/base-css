@@ -21923,8 +21923,8 @@ ${JSON.stringify(newTargetLocation, null, 2)}
   var template7 = (
     /* html */
     `
-  <figure>
-    <img src="" />
+  <figure ref="figure">
+    <img src="" ref="img" />
     <figcaption>A randomly-generated pattern</figcaption>
   </figure>
 `
@@ -21934,8 +21934,40 @@ ${JSON.stringify(newTargetLocation, null, 2)}
     template: template7,
     data() {
       return {
-        css: css7
+        css: css7,
+        resizeObserver: null
       };
+    },
+    mounted() {
+      const { figure, img } = this.$refs;
+      const canvas = document.createElement("canvas");
+      const redraw = /* @__PURE__ */ (() => {
+        let timeout = null;
+        return () => {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            const width = figure.parentElement.getBoundingClientRect().width;
+            const height = Math.min(320, width / 2);
+            canvas.width = width;
+            canvas.height = height;
+            const context = canvas.getContext("2d");
+            const step = Math.floor(width / 100);
+            for (let x = 0; x < width; x += step) {
+              for (let y = 0; y < height; y += step) {
+                const lightness = Math.random() * 100;
+                context.fillStyle = `hsl(0deg, 0%, ${lightness}%)`;
+                context.fillRect(x, y, step, step);
+              }
+            }
+            img.src = canvas.toDataURL();
+          }, 100);
+        };
+      })();
+      this.resizeObserver = new ResizeObserver(redraw);
+      this.resizeObserver.observe(figure);
+    },
+    unmounted() {
+      this.resizeObserver.disconnect();
     }
   });
 
@@ -23131,22 +23163,31 @@ ${JSON.stringify(newTargetLocation, null, 2)}
   // demo/src/main.mjs
   var css18 = (
     /* css */
-    ``
+    `
+  section.app > .row > div:has(aside) {
+    padding-right: var(--spacing);
+    border-right: var(--line-thickness) solid var(--color-gray-0);
+  }
+
+  section.app > .row > div:not(:has(aside)) {
+    flex-grow: 999999;
+  }
+`
   );
   var template18 = (
     /* html */
     `
-  <section>
-    <h1>
-      <a href="#">
-        base.css
-      </a>
-    </h1>
+  <section class="app">
+    <header>
+      <h1>
+        <a href="#">
+          base.css
+        </a>
+      </h1>
+    </header>
 
-    <hr>
-
-    <div class="cols">
-      <div class="col col-3">
+    <div class="row row-left row-top">
+      <div>
         <div>
           <b class="text-gray-6">Documentation</b>
         </div>
@@ -23174,7 +23215,7 @@ ${JSON.stringify(newTargetLocation, null, 2)}
         </aside>
       </div>
 
-      <div class="col col-9">
+      <div>
         <router-view></router-view>
       </div>
     </div>

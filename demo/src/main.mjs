@@ -2,24 +2,33 @@
 // CSS
 // -----------------------------------------------------------------------------
 
-const css = /* css */ ``
+const css = /* css */ `
+  section.app > .row > div:has(aside) {
+    padding-right: var(--spacing);
+    border-right: var(--line-thickness) solid var(--color-gray-0);
+  }
+
+  section.app > .row > div:not(:has(aside)) {
+    flex-grow: 999999;
+  }
+`
 
 // -----------------------------------------------------------------------------
 // HTML
 // -----------------------------------------------------------------------------
 
 const template = /* html */ `
-  <section>
-    <h1>
-      <a href="#">
-        base.css
-      </a>
-    </h1>
+  <section class="app">
+    <header>
+      <h1>
+        <a href="#">
+          base.css
+        </a>
+      </h1>
+    </header>
 
-    <hr>
-
-    <div class="cols">
-      <div class="col col-3">
+    <div class="row row-left row-top">
+      <div>
         <div>
           <b class="text-gray-6">Documentation</b>
         </div>
@@ -47,7 +56,7 @@ const template = /* html */ `
         </aside>
       </div>
 
-      <div class="col col-9">
+      <div>
         <router-view></router-view>
       </div>
     </div>
