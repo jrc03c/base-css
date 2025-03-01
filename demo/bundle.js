@@ -21678,7 +21678,7 @@ ${JSON.stringify(newTargetLocation, null, 2)}
   var template5 = (
     /* html */
     `
-  <div id="columns-container"></div>
+  <div id="columns-container" ref="container"></div>
 `
   );
   var ColumnsView = createVueComponentWithCSS({
@@ -21688,6 +21688,43 @@ ${JSON.stringify(newTargetLocation, null, 2)}
       return {
         css: css5
       };
+    },
+    mounted() {
+      const { container } = this.$refs;
+      for (let i = 1; i < 9; i++) {
+        const columns = document.createElement("div");
+        columns.classList.add("cols");
+        for (let j = 0; j < i; j++) {
+          const column = document.createElement("div");
+          column.classList.add("col");
+          column.classList.add("bg-teal-1");
+          column.classList.add("text-teal-8");
+          column.innerHTML = `Column ${j + 1}`;
+          columns.appendChild(column);
+        }
+        container.appendChild(columns);
+      }
+      for (let i = 1; i < 12; i++) {
+        const columns = document.createElement("div");
+        columns.classList.add("cols");
+        const col1 = document.createElement("div");
+        col1.innerHTML = "col-" + i;
+        col1.style.fontSize = "0.75em";
+        col1.classList.add("col");
+        col1.classList.add("col-" + i);
+        col1.classList.add("bg-yellow-1");
+        col1.classList.add("text-yellow-5");
+        const col2 = document.createElement("div");
+        col2.innerHTML = "col-" + (12 - i);
+        col2.style.fontSize = "0.75em";
+        col2.classList.add("col");
+        col2.classList.add("col-" + (12 - i));
+        col2.classList.add("bg-yellow-1");
+        col2.classList.add("text-yellow-5");
+        columns.appendChild(col1);
+        columns.appendChild(col2);
+        container.appendChild(columns);
+      }
     }
   });
 
