@@ -2,6 +2,8 @@
 
 This is a little CSS library. I hope to build other libraries on top of it someday.
 
+[[screenshot](screenshot.png)]
+
 # Installation
 
 ```bash
