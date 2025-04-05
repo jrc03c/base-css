@@ -357,7 +357,7 @@ template {
   --spacing-lg: 3rem;
   --spacing-xl: 6rem;
 
-  --border-radius: 4px;
+  --border-radius: 3px;
   --line-thickness: 2px;
   --shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
 
@@ -509,6 +509,7 @@ template {
 
   --line-height: 1.5em;
   --min-button-width: 128px;
+  --button-z-height: 4px;
   --brightness-active: 90%;
   --brightness-hover: 105%;
   --transition-duration: 0.1s;
@@ -1310,25 +1311,30 @@ button,
 input[type="submit"] {
   display: inline-block;
   margin: 0;
-  padding: var(--spacing-sm) var(--spacing);
+  padding:
+    calc(var(--spacing-sm) - calc(var(--button-z-height) / 2))
+    var(--spacing);
   border: 0;
   border-radius: var(--border-radius);
   background-color: var(--color-gray-4);
   cursor: pointer;
   min-width: var(--min-button-width);
   font-weight: 600;
-  box-shadow: var(--shadow);
+  box-shadow: 0 var(--button-z-height) 0 var(--color-gray-5);
+  transform: translateY(calc(-1 * var(--button-z-height)));
 }
 
 button.danger,
 input[type="submit"].danger {
   background-color: var(--color-red-4);
+  box-shadow: 0 var(--button-z-height) 0 var(--color-red-5);
 }
 
 button.dark,
 input[type="submit"].dark {
   background-color: var(--color-gray-8);
   color: white;
+  box-shadow: 0 var(--button-z-height) 0 var(--color-gray-9);
 }
 
 button.close,
@@ -1351,6 +1357,7 @@ button.delete {
   min-height: 2em;
   max-height: 2em;
   transform: none;
+  box-shadow: none;
 }
 
 button.close::before,
@@ -1363,27 +1370,32 @@ button.info,
 input[type="submit"].info {
   background-color: var(--color-blue-4);
   color: white;
+  box-shadow: 0 var(--button-z-height) 0 var(--color-blue-5);
 }
 
 button.link,
 input[type="submit"].link {
   background-color: var(--color-indigo-4);
   color: white;
+  box-shadow: 0 var(--button-z-height) 0 var(--color-indigo-5);
 }
 
 button.primary,
 input[type="submit"].primary {
   background-color: var(--color-teal-4);
+  box-shadow: 0 var(--button-z-height) 0 var(--color-teal-5);
 }
 
 button.success,
 input[type="submit"].success {
   background-color: var(--color-lime-4);
+  box-shadow: 0 var(--button-z-height) 0 var(--color-lime-5);
 }
 
 button.warning,
 input[type="submit"].warning {
   background-color: var(--color-yellow-4);
+  box-shadow: 0 var(--button-z-height) 0 var(--color-yellow-5);
 }
 
 button:hover,
@@ -1395,7 +1407,7 @@ button:active,
 input[type="submit"]:active {
   filter: brightness(var(--brightness-active));
   box-shadow: none;
-  transform: scale(0.95);
+  transform: translateY(0);
 }
 
 button.close:active,
