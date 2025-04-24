@@ -205,16 +205,39 @@ Utility classes based on the above variable names are available. Here are their 
 
 There are also a few standalone utility classes:
 
-- `text-center` = center-aligns the text of the element
-- `text-justify` = justifies the text of the element
-- `text-left` = left-aligns the text of an element
-- `text-right` = right-aligns the text of an element
+- `danger`
+- `dark`
+- `info`
+- `light`
+- `link`
+- `primary`
+- `success`
+- `text-center`
+- `text-justify`
+- `text-left`
+- `text-right`
+- `warning`
 
 # Components, elements, & classes
 
 For the most part, I tried to style HTML elements directly based on semantics and without using class names. So, for example, anchor tags (`<a>`), headings (`<h1>` through `<h6>`), horizontal rules (`<hr>`), most form inputs (`<input>`, `<select>`, etc.), lists (`ol` and `ul`), and so on, all receive styles even though I haven't documented most of them below. The things that _are_ documented below either required class names or else were noteworthy for some other reason, like for unexpected behavior involving breakpoints or whatever.
 
 ## Banner (`.banner`)
+
+A banner is a floating element that usually covers a bit of the page either at the very top or very bottom of the viewport. It is intended to be displayed above everything else on the page. Banners are commonly used to display cookie consent forms, for example.
+
+Apply `top` or `bottom` classes to the banner element to place it at the top or bottom of the page. Apply classes like `danger`, `light`, etc., to indicate state.
+
+**Example:**
+
+```html
+<div class="banner bottom danger">
+  <div>Accept these cookies — or else!</div>
+  <button>Okay...</button>
+</div>
+```
+
+![](demo/example-banner.png)
 
 ## Blockquote (`<blockquote>`)
 
