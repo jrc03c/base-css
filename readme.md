@@ -375,6 +375,8 @@ Containers are designed such that you should only use one of them on a page, usu
 
 A control is usually the combination of a form input element and a label.
 
+Apply classes like `danger` to the input elements themselves to indicate state.
+
 **Examples:**
 
 ```html
@@ -385,23 +387,25 @@ A control is usually the combination of a form input element and a label.
 
 <div class="control">
   <label>Favorite color</label>
-  <input type="color" />
+  <input class="danger" type="color" />
 </div>
 
 <div class="control">
   <label>Date of birth</label>
-  <input type="date" />
+  <input class="warning" type="date" />
 </div>
 
 <div class="control">
   <label>Email address</label>
-  <input placeholder="someone@example.com" type="email" />
+  <input class="success" placeholder="someone@example.com" type="email" />
 </div>
 ```
 
 ![](demo/control.png)
 
 ## Details (`<details>`)
+
+A details element is a collapsible element that shows information. The always-visible part of the details element is the `<summary>` element, which is a direct child of the details element.
 
 ## Dialog (`<dialog>`)
 
