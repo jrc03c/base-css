@@ -373,6 +373,34 @@ Containers are designed such that you should only use one of them on a page, usu
 
 ## Control (`.control`)
 
+A control is usually the combination of a form input element and a label.
+
+**Examples:**
+
+```html
+<div class="control">
+  <input type="checkbox" />
+  <label>Will be attending</label>
+</div>
+
+<div class="control">
+  <label>Favorite color</label>
+  <input type="color" />
+</div>
+
+<div class="control">
+  <label>Date of birth</label>
+  <input type="date" />
+</div>
+
+<div class="control">
+  <label>Email address</label>
+  <input placeholder="someone@example.com" ="email" />
+</div>
+```
+
+![](demo/control.png)
+
 ## Details (`<details>`)
 
 ## Dialog (`<dialog>`)
