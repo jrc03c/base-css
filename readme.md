@@ -237,9 +237,31 @@ Apply `top` or `bottom` classes to the banner element to place it at the top or 
 </div>
 ```
 
-![](demo/example-banner.png)
+![](demo/banner.png)
 
 ## Blockquote (`<blockquote>`)
+
+**Example:**
+
+```html
+<blockquote>
+  <p>
+    <b>
+      Gideon the Ninth
+      <br />
+      <span style="color: var(--color-gray-5)">by Tamsyn Muir</span>
+    </b>
+  </p>
+
+  <p>
+    In the myriadic year of our Lord — the ten thousandth year of the King
+    Undying, the kindly Prince of Death! — Gideon Nav packed her sword, her
+    shoes, and her dirty magazines, and she escaped from the House of the Ninth.
+  </p>
+</blockquote>
+```
+
+![](demo/blockquote.png)
 
 ## Box (`.box`)
 
