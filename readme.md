@@ -407,6 +407,35 @@ Apply classes like `danger` to the input elements themselves to indicate state.
 
 A details element is a collapsible element that shows information. The always-visible part of the details element is the `<summary>` element, which is a direct child of the details element.
 
+Apply classes like `danger`, `light`, etc., to indicate state.
+
+**Example:**
+
+```html
+<details class="info light">
+  <summary>Click here for more details.</summary>
+
+  <p>
+    Sweet roll chupa chups gingerbread chocolate bar jelly sugar plum cupcake
+    chupa chups. Chocolate caramels gummies powder chocolate lollipop. Bonbon
+    shortbread cotton candy chupa chups cake toffee marzipan jelly lemon drops.
+    Sugar plum powder ice cream candy canes cake biscuit pudding fruitcake
+    wafer. Chupa chups gingerbread lollipop tart sugar plum gummies chocolate
+    cake soufflé apple pie. Sweet cotton candy apple pie chocolate bar brownie
+    sweet roll candy canes donut candy. Danish sugar plum pudding jelly-o
+    marzipan. Liquorice tiramisu toffee jujubes apple pie apple pie gummies
+    liquorice. Gummi bears danish cake donut chocolate bar tootsie roll. Pie
+    liquorice pudding macaroon biscuit. Donut sweet roll liquorice bear claw
+    marshmallow halvah. Halvah jelly chocolate bar gingerbread ice cream pie
+    croissant tootsie roll carrot cake.
+  </p>
+
+  <p><a href="https://cupcakeipsum.com">cupcakeipsum.com</a></p>
+</details>
+```
+
+![](demo/details.png)
+
 ## Dialog (`<dialog>`)
 
 ## Figure (`<figure>`)
