@@ -395,7 +395,7 @@ A control is usually the combination of a form input element and a label.
 
 <div class="control">
   <label>Email address</label>
-  <input placeholder="someone@example.com" ="email" />
+  <input placeholder="someone@example.com" type="email" />
 </div>
 ```
 
