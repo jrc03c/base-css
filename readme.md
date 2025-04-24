@@ -336,6 +336,19 @@ Apply classes like `danger`, `light`, etc., to indicate state.
 
 ## Columns (`.cols` + `.col`)
 
+Columns can be created by applying a `cols` class to an element and a `col` class to each of the element's immediate children. To specify exactly how much width (in terms of number of columns out of 12) a child should take up, use the classes `col-1`, `col-2`, etc., up to `col-11`. Here's an illustration of how these classes take up space:
+
+![](demo/columns.png)
+
+**Example:**
+
+```html
+<div class="cols">
+  <div class="col col-9"></div>
+  <div class="col col-3"></div>
+</div>
+```
+
 ## Container (`.container`)
 
 ## Control (`.control`)
