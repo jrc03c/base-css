@@ -960,8 +960,7 @@ button,
 input[type="submit"] {
   display: inline-block;
   margin: 0;
-  padding:
-    calc(var(--spacing-sm) - calc(var(--button-z-height) / 2))
+  padding: calc(var(--spacing-sm) - calc(var(--button-z-height) / 2))
     var(--spacing);
   border: 0;
   border-radius: var(--border-radius);
@@ -1766,6 +1765,102 @@ nav > .nav-right > menu {
 nav > .nav-right > menu li {
   margin: 0;
   list-style-type: none;
+}
+
+.notification {
+  position: relative;
+  margin: 0 0 var(--spacing) 0;
+  padding: var(--spacing);
+  border: 0;
+  border-radius: var(--border-radius);
+  background-color: var(--color-gray-1);
+}
+
+.notification.danger {
+  background-color: var(--color-red-1);
+}
+
+.notification.dark {
+  background-color: var(--color-gray-8);
+}
+
+.notification.dark,
+.notification.dark *:not(a) {
+  color: var(--color-gray-0);
+}
+
+.notification.info {
+  background-color: var(--color-blue-1);
+}
+
+.notification.info,
+.notification.info *:not(a) {
+  color: var(--color-gray-9);
+}
+
+.notification.link {
+  background-color: var(--color-indigo-1);
+}
+
+.notification.link,
+.notification.link *:not(a) {
+  color: var(--color-gray-9);
+}
+
+.notification.primary {
+  background-color: var(--color-teal-1);
+}
+
+.notification.success {
+  background-color: var(--color-lime-1);
+}
+
+.notification.warning {
+  background-color: var(--color-yellow-1);
+}
+
+.notification button.close,
+.notification button.delete {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  background-color: var(--color-gray-2);
+}
+
+.notification.danger:has(> button.close) button.close,
+.notification.danger:has(> button.delete) button.delete {
+  background-color: var(--color-red-2);
+}
+
+.notification.dark:has(> button.close) button.close,
+.notification.dark:has(> button.delete) button.delete {
+  background-color: var(--color-gray-8);
+  color: white;
+}
+
+.notification.info:has(> button.close) button.close,
+.notification.info:has(> button.delete) button.delete {
+  background-color: var(--color-blue-2);
+}
+
+.notification.link:has(> button.close) button.close,
+.notification.link:has(> button.delete) button.delete {
+  background-color: var(--color-indigo-2);
+}
+
+.notification.primary:has(> button.close) button.close,
+.notification.primary:has(> button.delete) button.delete {
+  background-color: var(--color-teal-2);
+}
+
+.notification.success:has(> button.close) button.close,
+.notification.success:has(> button.delete) button.delete {
+  background-color: var(--color-lime-2);
+}
+
+.notification.warning:has(> button.close) button.close,
+.notification.warning:has(> button.delete) button.delete {
+  background-color: var(--color-yellow-2);
 }
 
 ol {
