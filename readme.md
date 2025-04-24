@@ -313,6 +313,27 @@ Apply classes like `danger`, `light`, etc., to indicate state.
 
 ## Code (`<code>`)
 
+**Example:**
+
+```html
+<p>
+  Here's a
+  <code>code</code>
+  block:
+</p>
+
+<pre>
+  <code>
+    function fib(n) {
+      if (n < 3) return 1
+      return fib(n - 1) + fib(n - 2)
+    }
+  </code>
+</pre>
+```
+
+![](demo/code.png)
+
 ## Columns (`.cols` + `.col`)
 
 ## Container (`.container`)
