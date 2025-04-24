@@ -351,6 +351,26 @@ Columns can be created by applying a `cols` class to an element and a `col` clas
 
 ## Container (`.container`)
 
+A container is a high-level element that sets the width of the contentful part of the page to 960px and centers it in the viewport. When the viewport width drops below 960px, the container takes up the full viewport width.
+
+Containers are designed such that you should only use one of them on a page, usually as an immediate child of a `<section>`, itself an immediate child of `<body>`.
+
+**Example:**
+
+```html
+<!doctype html>
+<html>
+  <head>
+    ...
+  </head>
+  <body>
+    <section>
+      <div class="container">...</div>
+    </section>
+  </body>
+</html>
+```
+
 ## Control (`.control`)
 
 ## Details (`<details>`)
