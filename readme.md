@@ -625,6 +625,18 @@ Apply classes like `danger`, `light`, etc., to indicate state.
 
 ## Row (`.row`)
 
+Creates a vertically-centered row of elements stretching out to the edges of the container (i.e., `justify-content: space-between`).
+
+**Example:**
+
+```html
+<div class="row">
+  <div>...</div>
+  <div>...</div>
+  <div>...</div>
+</div>
+```
+
 ## Section (`<section>`)
 
 ## Table container & table (`.table-container` + `<table>`)
