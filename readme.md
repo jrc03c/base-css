@@ -529,6 +529,47 @@ Apply classes like `danger`, `light`, etc., to indicate state.
 
 ## Navigation (`<nav>`)
 
+**Example:**
+
+```html
+<nav class="light">
+  <div class="nav-left">
+    <a href=""><b>base.css</b></a>
+  </div>
+
+  <div class="nav-right">
+    <div class="nav-burger">
+      <input id="nav-burger-checkbox" type="checkbox" />
+      <label for="nav-burger-checkbox"></label>
+    </div>
+
+    <menu>
+      <li>
+        <a href="">Home</a>
+      </li>
+
+      <li>
+        <a href="">About</a>
+      </li>
+
+      <li>
+        <a href="">Documentation</a>
+      </li>
+
+      <li>
+        <a href="">FAQ</a>
+      </li>
+
+      <li>
+        <a href="">Contact</a>
+      </li>
+    </menu>
+  </div>
+</nav>
+```
+
+![](demo/nav.png)
+
 ## Notification (`.notification`)
 
 ## Progress (`<progress>`)
