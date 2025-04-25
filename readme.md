@@ -480,6 +480,53 @@ Apply classes like `danger`, `light`, etc., to indicate state.
 
 ## Footer (`<footer>`)
 
+**Example:**
+
+```html
+<footer>
+  <div class="container row row-comfy row-top">
+    <div>
+      <div>
+        <a href="">Home</a>
+      </div>
+
+      <div>
+        <a href="">About</a>
+      </div>
+
+      <div>
+        <a href="">Documentation</a>
+      </div>
+
+      <div>
+        <a href="">FAQ</a>
+      </div>
+
+      <div>
+        <a href="">Contact</a>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+        condimentum faucibus tellus, non consectetur felis pharetra ac. Aliquam
+        dapibus dignissim rhoncus. Cras interdum ante vitae libero gravida, eget
+        posuere metus tempus. Maecenas in fermentum eros, a commodo massa.
+        Aliquam eu gravida urna. Sed porttitor pulvinar sem, a sodales risus
+        semper eu.
+      </div>
+
+      <br />
+
+      <div>Copyright Nobody 2025.</div>
+    </div>
+  </div>
+</footer>
+```
+
+![](demo/footer.png)
+
 ## Navigation (`<nav>`)
 
 ## Notification (`.notification`)
