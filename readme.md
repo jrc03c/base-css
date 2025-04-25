@@ -529,6 +529,8 @@ Apply classes like `danger`, `light`, etc., to indicate state.
 
 ## Navigation (`<nav>`)
 
+Apply classes like `danger`, `light`, etc., to indicate state.
+
 **Example:**
 
 ```html
@@ -572,7 +574,38 @@ Apply classes like `danger`, `light`, etc., to indicate state.
 
 ## Notification (`.notification`)
 
+Apply classes like `danger`, `light`, etc., to indicate state.
+
+**Example:**
+
+```html
+<div class="notification warning">
+  <button class="close"></button>
+
+  <p>
+    Sweet roll chupa chups gingerbread chocolate bar jelly sugar plum cupcake
+    chupa chups. Chocolate caramels gummies powder chocolate lollipop. Bonbon
+    shortbread cotton candy chupa chups cake toffee marzipan jelly lemon drops.
+    Sugar plum powder ice cream candy canes cake biscuit pudding fruitcake
+    wafer. Chupa chups gingerbread lollipop tart sugar plum gummies chocolate
+    cake soufflé apple pie. Sweet cotton candy apple pie chocolate bar brownie
+    sweet roll candy canes donut candy. Danish sugar plum pudding jelly-o
+    marzipan. Liquorice tiramisu toffee jujubes apple pie apple pie gummies
+    liquorice. Gummi bears danish cake donut chocolate bar tootsie roll. Pie
+    liquorice pudding macaroon biscuit. Donut sweet roll liquorice bear claw
+    marshmallow halvah. Halvah jelly chocolate bar gingerbread ice cream pie
+    croissant tootsie roll carrot cake.
+  </p>
+
+  <p><a href="https://cupcakeipsum.com">cupcakeipsum.com</a></p>
+</div>
+```
+
+![](demo/notification.png)
+
 ## Progress (`<progress>`)
+
+Apply classes like `danger`, `light`, etc., to indicate state.
 
 ## Row (`.row`)
 
@@ -581,3 +614,5 @@ Apply classes like `danger`, `light`, etc., to indicate state.
 ## Table container & table (`.table-container` + `<table>`)
 
 ## Tag (`.tag`)
+
+Apply classes like `danger`, `light`, etc., to indicate state.
