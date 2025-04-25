@@ -607,6 +607,22 @@ Apply classes like `danger`, `light`, etc., to indicate state.
 
 Apply classes like `danger`, `light`, etc., to indicate state.
 
+**Examples:**
+
+```html
+<progress class="light"></progress>
+<progress></progress>
+<progress class="dark"></progress>
+<progress class="danger"></progress>
+<progress class="warning"></progress>
+<progress class="success"></progress>
+<progress class="primary"></progress>
+<progress class="info"></progress>
+<progress class="link"></progress>
+```
+
+![](demo/progress.png)
+
 ## Row (`.row`)
 
 ## Section (`<section>`)
