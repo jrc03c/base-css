@@ -436,7 +436,34 @@ Apply classes like `danger`, `light`, etc., to indicate state.
 
 ![](demo/details.png)
 
-## Dialog (`<dialog>`)
+## Dialog / modal (`<dialog>`)
+
+**Example:**
+
+```html
+<dialog>
+  <button class="close" id="modal-close-button"></button>
+
+  <div class="box">
+    <p><b>Nietzsche Ipsum</b></p>
+
+    <p>
+      Spirit eternal-return holiest zarathustra aversion faithful overcome
+      transvaluation christian. Dead faith eternal-return morality fearful
+      faithful. Joy justice evil reason war horror. Ultimate ascetic madness
+      salvation of. Pious strong fearful will value god merciful pious
+      contradict victorious madness. Reason god contradict right holiest.
+    </p>
+
+    <p>
+      <b>Source:</b>
+      <a href="http://nietzsche-ipsum.com/">nietzsche-ipsum.com</a>
+    </p>
+  </div>
+</dialog>
+```
+
+![](demo/dialog.png)
 
 ## Figure (`<figure>`)
 
