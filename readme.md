@@ -222,6 +222,25 @@ There are also a few standalone utility classes:
 
 For the most part, I tried to style HTML elements directly based on semantics and without using class names. So, for example, anchor tags (`<a>`), headings (`<h1>` through `<h6>`), horizontal rules (`<hr>`), most form inputs (`<input>`, `<select>`, etc.), lists (`ol` and `ul`), and so on, all receive styles even though I haven't documented most of them below. The things that _are_ documented below either required class names or else were noteworthy for some other reason, like for unexpected behavior involving breakpoints or whatever.
 
+- [Banner](#banner-banner)
+- [Blockquote](#blockquote-blockquote)
+- [Box](#box-box)
+- [Button](#button-button-input-typesubmit)
+- [Code](#code-code)
+- [Columns](#columns-cols--col)
+- [Container](#container-container)
+- [Control](#control-control)
+- [Details](#details-details)
+- [Dialog / modal](#dialog--modal-dialog)
+- [Figure](#figure-figure)
+- [Footer](#footer-footer)
+- [Navigation](#navigation-nav)
+- [Notification](#notification-notification)
+- [Progress](#progress-progress)
+- [Row](#row-row)
+- [Table container & table](#table-container--table-table-container--table)
+- [Tag](#tag-tag)
+
 ## Banner (`.banner`)
 
 A banner is a floating element that usually covers a bit of the page either at the very top or very bottom of the viewport. It is intended to be displayed above everything else on the page. Banners are commonly used to display cookie consent forms, for example.
