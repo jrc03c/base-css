@@ -637,10 +637,58 @@ Creates a vertically-centered row of elements stretching out to the edges of the
 </div>
 ```
 
-## Section (`<section>`)
-
 ## Table container & table (`.table-container` + `<table>`)
+
+Put a `<table>` inside a `.table-container` element to let the table scroll horizontally when it overflows its container.
 
 ## Tag (`.tag`)
 
+Can optionally include a close button.
+
 Apply classes like `danger`, `light`, etc., to indicate state.
+
+**Examples:**
+
+```html
+<span class="tag">
+  <button class="close"></button>
+  Default
+</span>
+
+<span class="tag dark">
+  <button class="close"></button>
+  Dark
+</span>
+
+<span class="tag danger">
+  <button class="close"></button>
+  Danger
+</span>
+
+<span class="tag warning">
+  <button class="close"></button>
+  Warning
+</span>
+
+<span class="tag success">
+  <button class="close"></button>
+  Success
+</span>
+
+<span class="tag primary">
+  <button class="close"></button>
+  Primary
+</span>
+
+<span class="tag info">
+  <button class="close"></button>
+  Info
+</span>
+
+<span class="tag link">
+  <button class="close"></button>
+  Link
+</span>
+```
+
+![](demo/tag.png)
