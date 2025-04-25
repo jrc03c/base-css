@@ -467,6 +467,17 @@ Apply classes like `danger`, `light`, etc., to indicate state.
 
 ## Figure (`<figure>`)
 
+**Example:**
+
+```html
+<figure>
+  <img src="..." />
+  <figcaption>A randomly-generated pattern</figcaption>
+</figure>
+```
+
+![](demo/figure.png)
+
 ## Footer (`<footer>`)
 
 ## Navigation (`<nav>`)
